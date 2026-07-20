@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Саханхой — Lineage Keeper</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600;700&family=Source+Serif+4:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="app">
+
+  <div class="topbar">
+    <button class="btn" id="sidebarToggle" title="Sidebar">☰</button>
+    <div class="brand">
+      <div class="mark"></div>
+      <div>
+        <h1 id="brandTitle">Саханхой</h1>
+        <small id="brandSub"></small>
+      </div>
+    </div>
+
+    <div class="search-wrap">
+      <input type="text" id="searchInput" autocomplete="off" data-i18n-ph="searchPh">
+      <div class="search-results" id="searchResults" style="display:none;"></div>
+    </div>
+
+    <div class="topbar-controls">
+      <div class="popwrap">
+        <button class="btn" id="fieldsBtn" data-i18n="fieldsBtn"></button>
+        <div class="popover" id="fieldsPop" hidden>
+          <div class="pop-head" data-i18n="fieldsTitle"></div>
+          <table class="fieldgrid">
+            <thead><tr><th></th><th data-i18n="onHover"></th><th data-i18n="onSelect"></th></tr></thead>
+            <tbody id="fieldRows"></tbody>
+          </table>
+          <label class="toggle-pill" style="margin-top:10px;">
+            <span class="switch"><input type="checkbox" id="tooltipToggle" checked><span class="slider"></span></span>
+            <span data-i18n="hoverTags"></span>
+          </label>
+        </div>
+      </div>
+
+      <select id="langDisplay" class="btn" style="cursor:pointer;">
+        <option value="both" data-i18n="scriptBoth"></option>
+        <option value="ru" data-i18n="scriptRu"></option>
+        <option value="en" data-i18n="scriptEn"></option>
+      </select>
+
+      <button class="btn" id="undoBtn" title="Ctrl+Z">↶</button>
+      <button class="btn" id="redoBtn" title="Ctrl+Y">↷</button>
+      <label class="toggle-pill" id="editModeWrap" hidden>
+        <span class="switch"><input type="checkbox" id="editModeToggle"><span class="slider"></span></span>
+        <span data-i18n="editMode"></span>
+      </label>
+      <button class="btn" id="realignBtn" hidden data-i18n="realign"></button>
+      <button class="btn" id="themeBtn" title="Day / Night">☾</button>
+      <button class="btn" id="uiLangBtn">EN</button>
+
+      <span id="roleBadge" class="role-badge viewer">viewer</span>
+      <button class="btn" id="loginBtn" data-i18n="logIn"></button>
+      <button class="btn" id="signOutBtn" data-i18n="signOut" hidden></button>
+    </div>
+  </div>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+
+      <div class="panel" id="loginPanel">
+        <h2 data-i18n="whoAreYou"></h2>
+        <div class="field">
+          <label data-i18n="yourName"></label>
+          <input type="text" id="userName" data-i18n-ph="namePh">
+        </div>
+        <div class="field">
+          <label data-i18n="role"></label>
+          <select id="userRole">
+            <option value="viewer" data-i18n="roleViewer"></option>
+            <option value="moderator" data-i18n="roleModerator"></option>
+            <option value="admin" data-i18n="roleAdmin"></option>
+          </select>
+        </div>
+        <div class="field" id="passcodeField" style="display:none;">
+          <label data-i18n="passcode"></label>
+          <input type="password" id="userPasscode">
+        </div>
+        <button class="btn primary" id="saveIdentityBtn" style="width:100%;" data-i18n="save"></button>
+        <div class="hint" data-i18n="passcodeHint" style="margin-top:8px;"></div>
+      </div>
+
+      <div class="panel" id="signedInPanel" hidden>
+        <h2 data-i18n="signedIn"></h2>
+        <div class="signed-row">
+          <div>
+            <div class="signed-name" id="signedName"></div>
+            <div class="signed-role" id="signedRole"></div>
+          </div>
+          <button class="btn small" id="signOutBtn2" data-i18n="signOut"></button>
+        </div>
+      </div>
+
+      <div class="panel collapsible" id="addPersonPanel">
+        <h2 data-i18n="addPerson"></h2>
+        <div class="field-row">
+          <div class="field"><label data-i18n="nameRu"></label><input type="text" id="p_nameRu"></div>
+          <div class="field"><label data-i18n="nameEn"></label><input type="text" id="p_nameEn"></div>
+        </div>
+        <div class="hint" data-i18n="translitHint" style="margin:-5px 0 8px;"></div>
+        <div class="field"><label data-i18n="born"></label><div class="datefield" id="p_birth"></div></div>
+        <div class="field"><label data-i18n="died"></label><div class="datefield" id="p_death"></div></div>
+        <div class="field">
+          <label data-i18n="father"></label>
+          <div class="combo" id="p_fatherCombo"></div>
+        </div>
+        <div class="field">
+          <label data-i18n="familyName"></label>
+          <select id="p_family"></select>
+          <div class="new-tag-inline" id="newFamRow" style="display:none;">
+            <input type="text" id="newFamName" data-i18n-ph="newFamily">
+            <div class="color-row"><input type="color" id="newFamColor" value="#c4903f"></div>
+          </div>
+        </div>
+        <div class="field">
+          <label>Teip</label>
+          <select id="p_teip"></select>
+          <div class="new-tag-inline" id="newTeipRow" style="display:none;">
+            <input type="text" id="newTeipName" data-i18n-ph="newTeip">
+            <div class="color-row"><input type="color" id="newTeipColor" value="#748067"></div>
+          </div>
+        </div>
+        <div class="field">
+          <label>Tukkhum</label>
+          <select id="p_tukkhum"></select>
+          <div class="new-tag-inline" id="newTukRow" style="display:none;">
+            <input type="text" id="newTukName" data-i18n-ph="newTukkhum">
+            <div class="color-row"><input type="color" id="newTukColor" value="#5f7ea3"></div>
+          </div>
+        </div>
+        <div class="field"><label data-i18n="source"></label>
+          <input type="text" id="p_source" list="sourceListAdd" data-i18n-ph="sourcePh">
+          <datalist id="sourceListAdd"></datalist></div>
+        <div class="field"><label data-i18n="notes"></label><textarea id="p_notes"></textarea></div>
+        <button class="btn primary" id="addPersonBtn" style="width:100%;" data-i18n="addPersonBtn"></button>
+        <div class="hint" id="addPersonHint" style="margin-top:6px;"></div>
+      </div>
+
+      <div class="panel" id="pendingPanel" style="display:none;">
+        <h2><span data-i18n="pending"></span> <span class="count" id="pendingCount"></span></h2>
+        <div id="pendingList"></div>
+      </div>
+
+      <div class="panel">
+        <h2><span data-i18n="families"></span> <span class="count" id="famCount"></span></h2>
+        <div class="legend-list" id="famLegend"></div>
+        <div class="hint" data-i18n="filterHint" style="margin-top:8px;"></div>
+      </div>
+
+      <div class="panel">
+        <h2><span data-i18n="teips"></span> <span class="count" id="teipCount"></span></h2>
+        <div class="legend-list" id="teipLegend"></div>
+      </div>
+
+      <div class="panel">
+        <h2><span data-i18n="tukkhums"></span> <span class="count" id="tukCount"></span></h2>
+        <div class="legend-list" id="tukLegend"></div>
+      </div>
+
+      <div class="panel">
+        <h2><span data-i18n="verification"></span> <span class="count" id="flagCount"></span></h2>
+        <div class="legend-list" id="flagList"></div>
+        <div class="hint" data-i18n="dashHint" style="margin-top:8px;"></div>
+      </div>
+
+      <div class="panel" id="sourcesPanel">
+        <h2><span data-i18n="sources"></span> <span class="count" id="sourceCount"></span></h2>
+        <div class="legend-list" id="sourceList2"></div>
+        <div class="hint" data-i18n="sourcesHint" style="margin-top:8px;"></div>
+      </div>
+
+      <div class="panel" id="versionsPanel">
+        <h2><span data-i18n="versions"></span> <span class="count" id="versionCount"></span></h2>
+        <div id="versionList"></div>
+      </div>
+
+      <div class="panel" id="adminPanel" style="display:none;">
+        <h2 data-i18n="adminSettings"></h2>
+        <div class="field"><label data-i18n="modPass"></label><input type="text" id="modPasscode"></div>
+        <div class="field"><label data-i18n="adminPass"></label><input type="text" id="adminPasscode"></div>
+        <button class="btn small" id="savePasscodesBtn" data-i18n="savePasscodes"></button>
+        <div class="btn-grid" style="margin-top:10px;">
+          <button class="btn small" id="exportDataBtn" data-i18n="exportJson"></button>
+          <button class="btn small" id="exportXlsxBtn" data-i18n="exportXlsx"></button>
+          <button class="btn small" id="importXlsxBtn" data-i18n="importXlsx"></button>
+          <button class="btn small" id="exportBtn" data-i18n="exportBackup"></button>
+          <button class="btn small" id="importBtn" data-i18n="importBackup"></button>
+          <button class="btn small danger" id="resetAllBtn" data-i18n="resetLocal"></button>
+        </div>
+        <input type="file" id="importFile" accept="application/json" style="display:none;">
+        <input type="file" id="importSheet" accept=".xlsx,.csv" style="display:none;">
+        <div class="hint" data-i18n="adminDataHint" style="margin-top:8px;"></div>
+      </div>
+
+      <div class="panel" id="activityPanel">
+        <h2 data-i18n="activity"></h2>
+        <div id="auditLog"></div>
+      </div>
+
+    </aside>
+
+    <main class="canvas-wrap">
+      <svg id="tree-svg"><g id="viewport"></g></svg>
+      <div class="empty-state" id="emptyState" style="display:none;">
+        <div class="es-title" data-i18n="emptyTitle"></div>
+        <div data-i18n="emptyBody"></div>
+      </div>
+      <div class="tooltip" id="tooltip"></div>
+      <div class="zoom-controls">
+        <button class="btn" id="zoomIn">+</button>
+        <button class="btn" id="zoomOut">−</button>
+        <button class="btn" id="zoomFit" style="font-size:12px;" title="Fit">⤢</button>
+      </div>
+    </main>
+  </div>
+</div>
+
+<div class="overlay" id="infoOverlay"><div class="modal" id="infoModal"></div></div>
+<div class="toast" id="toast"></div>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

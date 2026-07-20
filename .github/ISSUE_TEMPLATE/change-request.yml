@@ -1,0 +1,65 @@
+name: Уточнение / Change request
+description: Предложить исправление или дополнение / Suggest a correction or addition
+title: "[правка] "
+labels: ["change-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо, что помогаете уточнить родословную.
+        Thank you for helping to correct the lineage.
+
+  - type: input
+    id: person
+    attributes:
+      label: Человек / Person
+      description: Имя как оно сейчас на схеме / The name as it currently appears
+      placeholder: ГУДИ (Gudi)
+    validations:
+      required: true
+
+  - type: input
+    id: personid
+    attributes:
+      label: ID
+      description: Виден в карточке человека при выгрузке данных / Visible in the exported data
+      placeholder: gudi-1
+
+  - type: dropdown
+    id: field
+    attributes:
+      label: Что уточняем / What to correct
+      options:
+        - Написание кириллицей / Cyrillic spelling
+        - Написание латиницей / Latin spelling
+        - Фамилия / Family name
+        - Год рождения / Year of birth
+        - Год смерти / Year of death
+        - Отец / Father
+        - Новый человек / A person who is missing
+        - Примечание / Note
+        - Другое / Something else
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Как должно быть / What it should say
+    validations:
+      required: true
+
+  - type: textarea
+    id: source
+    attributes:
+      label: Откуда сведения / Where this comes from
+      description: |
+        Кто рассказал, какой документ, какая фотография.
+        Who told you, which document, which photograph.
+    validations:
+      required: true
+
+  - type: input
+    id: author
+    attributes:
+      label: Кто предлагает / Suggested by
