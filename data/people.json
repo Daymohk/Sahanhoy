@@ -13,7 +13,8 @@
   "epigraphEn": "Genealogical research is an act of respect for the memory of one’s ancestors. To know the history of your family is among the noblest of aims.",
   "epigraphBy": "Яраги Гадамаури",
   "note": "Транскрипция со схемы выполнена автоматически и требует проверки. Пунктирные связи не подтверждены.",
-  "version": 1
+  "version": 2,
+  "exported": "2026-07-21T00:24:23.481Z"
  },
  "people": [
   {
@@ -28,11 +29,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
-   "nameConfidence": "medium",
+   "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Корень"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "lom-1",
@@ -46,17 +45,15 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
-   "nameConfidence": "medium",
+   "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Корень"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "paydmr-1",
    "father": "lom-1",
-   "nameRu": "ПАЙДМР",
-   "nameEn": "Paydmr",
+   "nameRu": "ГӀАЙДМР",
+   "nameEn": "Ghaydmr",
    "surnameRu": "",
    "surnameEn": "",
    "teip": "Саханхой",
@@ -64,11 +61,9 @@
    "birth": "",
    "death": "",
    "notes": "Общий предок обеих главных ветвей на схеме",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Корень"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "tet-1",
@@ -82,11 +77,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "it-1",
@@ -100,11 +93,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "elig-1",
@@ -118,11 +109,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "mochi-1",
@@ -136,11 +125,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "hunakhk-1",
@@ -154,11 +141,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "elgaq-1",
@@ -172,11 +157,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "soltsbek-1",
@@ -190,11 +173,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "khavash-1",
@@ -208,11 +189,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "kazbek-1",
@@ -226,11 +205,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "salman-1",
@@ -244,11 +221,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "sulieman-1",
@@ -262,11 +237,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "kureish-1",
@@ -280,11 +253,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "shakhi-1",
@@ -298,11 +269,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "ruslan-1",
@@ -316,11 +285,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "gilani-1",
@@ -334,11 +301,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "ramzan-1",
@@ -352,11 +317,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "mudar-1",
@@ -370,11 +333,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "ibragim-1",
@@ -388,11 +349,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "ismail-1",
@@ -406,11 +365,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "rustam-1",
@@ -424,11 +381,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "ilez-1",
@@ -442,11 +397,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "mokhmad-1",
@@ -460,11 +413,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "musa-1",
@@ -478,11 +429,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "ruslan-2",
@@ -496,11 +445,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "beslan-1",
@@ -514,11 +461,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "sulambek-1",
@@ -532,11 +477,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "bugi-1",
@@ -550,11 +493,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
-   "nameConfidence": "high",
+   "nameConfidence": "medium",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "ali-1",
@@ -568,11 +509,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "alaig-1",
@@ -586,11 +525,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "ahmi-1",
@@ -604,11 +541,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "movti-1",
@@ -622,11 +557,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "huseyn-1",
@@ -640,11 +573,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "khasan-1",
@@ -658,11 +589,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "abaz-1",
@@ -676,11 +605,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "khartsi-1",
@@ -694,11 +621,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
-   "linkConfidence": "unverified",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "linkConfidence": "chart",
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "zukr-1",
@@ -712,11 +637,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
-   "linkConfidence": "unverified",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "linkConfidence": "chart",
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "muss-1",
@@ -730,29 +653,25 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "mahmat-1",
    "father": "muss-1",
    "nameRu": "МАХЬМАТ",
    "nameEn": "Mahmat",
-   "surnameRu": "Хусеев",
-   "surnameEn": "Khuseev",
+   "surnameRu": "Мусаев",
+   "surnameEn": "Musaev",
    "teip": "Саханхой",
    "tukkhum": "Мелхий",
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "yusup-1",
@@ -766,11 +685,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "umar-1",
@@ -784,11 +701,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "ali-2",
@@ -802,11 +717,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "yunus-1",
@@ -820,11 +733,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "tukhan-1",
@@ -838,11 +749,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "ibragim-2",
@@ -856,11 +765,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "lechi-1",
@@ -874,11 +781,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "mamed-1",
@@ -892,11 +797,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "murad-1",
@@ -910,17 +813,15 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "khidir-1",
    "father": "khartsi-1",
-   "nameRu": "ХИДИР",
-   "nameEn": "Khidir",
+   "nameRu": "ХИДР",
+   "nameEn": "Khidr",
    "surnameRu": "",
    "surnameEn": "",
    "teip": "Саханхой",
@@ -928,11 +829,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
-   "linkConfidence": "unverified",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "linkConfidence": "chart",
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "mochk-1",
@@ -946,11 +845,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "tersbolt-1",
@@ -964,15 +861,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "taisam-1",
-   "father": "mochk-1",
+   "father": "tersbolt-1",
    "nameRu": "ТАИСАМ",
    "nameEn": "Taisam",
    "surnameRu": "",
@@ -982,11 +877,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "musa-2",
@@ -1000,17 +893,15 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "tisii-1",
    "father": "mochk-1",
-   "nameRu": "ТИСИИ",
-   "nameEn": "Tisii",
+   "nameRu": "ТИСИ",
+   "nameEn": "Tisi",
    "surnameRu": "",
    "surnameEn": "",
    "teip": "Саханхой",
@@ -1018,17 +909,15 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "idriyas-1",
-   "father": "mochk-1",
-   "nameRu": "ИДРИЯС",
-   "nameEn": "Idriyas",
+   "father": "tisii-1",
+   "nameRu": "ИДРИС",
+   "nameEn": "Idris",
    "surnameRu": "",
    "surnameEn": "",
    "teip": "Саханхой",
@@ -1036,15 +925,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "baimarz-1",
-   "father": "mochk-1",
+   "father": "idriyas-1",
    "nameRu": "БАИМАРЗ",
    "nameEn": "Baimarz",
    "surnameRu": "",
@@ -1054,15 +941,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "movl-1",
-   "father": "mochk-1",
+   "father": "tisii-1",
    "nameRu": "МОВЛ",
    "nameEn": "Movl",
    "surnameRu": "",
@@ -1072,17 +957,15 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "seig-1",
    "father": "mochk-1",
-   "nameRu": "СЕИГ",
-   "nameEn": "Seig",
+   "nameRu": "СЕИТ",
+   "nameEn": "SEIT",
    "surnameRu": "",
    "surnameEn": "",
    "teip": "Саханхой",
@@ -1090,11 +973,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "khamzat-1",
@@ -1108,15 +989,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "umar-2",
-   "father": "khamzat-1",
+   "father": "baimarz-1",
    "nameRu": "УМАР",
    "nameEn": "Umar",
    "surnameRu": "",
@@ -1126,15 +1005,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "ali-3",
-   "father": "khamzat-1",
+   "father": "baimarz-1",
    "nameRu": "АЛИ",
    "nameEn": "Ali",
    "surnameRu": "",
@@ -1144,15 +1021,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "khusein-1",
-   "father": "khamzat-1",
+   "father": "baimarz-1",
    "nameRu": "ХУСЕИН",
    "nameEn": "Husein",
    "surnameRu": "",
@@ -1162,15 +1037,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "vakha-1",
-   "father": "seig-1",
+   "father": "khamzat-1",
    "nameRu": "ВАХА",
    "nameEn": "Vakha",
    "surnameRu": "",
@@ -1180,15 +1053,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "lechi-2",
-   "father": "seig-1",
+   "father": "khamzat-1",
    "nameRu": "ЛЕЧИ",
    "nameEn": "Lechi",
    "surnameRu": "",
@@ -1198,11 +1069,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "abbaz-1",
@@ -1216,11 +1085,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "sultan-1",
@@ -1234,11 +1101,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "movltgiri-1",
@@ -1252,11 +1117,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "sultangiri-1",
@@ -1270,11 +1133,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "khasan-2",
@@ -1288,11 +1149,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "mohmad-1",
@@ -1306,11 +1165,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "ahmad-1",
@@ -1324,11 +1181,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "ahyad-1",
@@ -1342,11 +1197,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "albaq-1",
@@ -1360,15 +1213,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
-   "linkConfidence": "unverified",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "linkConfidence": "chart",
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "sutrg-1",
-   "father": "albaq-1",
+   "father": "elig-1",
    "nameRu": "СУТРГ",
    "nameEn": "Sutrg",
    "surnameRu": "",
@@ -1378,11 +1229,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
-   "linkConfidence": "unverified",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "linkConfidence": "chart",
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "albaq-2-1",
@@ -1396,11 +1245,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
-   "nameConfidence": "medium",
+   "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "esk-1",
@@ -1414,11 +1261,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "suleyman-1",
@@ -1432,51 +1277,45 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "akhmed-1",
    "father": "esk-1",
    "nameRu": "АХМЕД",
    "nameEn": "Akhmed",
-   "surnameRu": "Гадамаури",
-   "surnameEn": "Gadamauri",
+   "surnameRu": "Гадамуров",
+   "surnameEn": "Gadamurov",
    "teip": "Саханхой",
    "tukkhum": "Мелхий",
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "askhab-1",
    "father": "esk-1",
    "nameRu": "АСХАБ",
    "nameEn": "Askhab",
-   "surnameRu": "",
-   "surnameEn": "",
+   "surnameRu": "Гадамуров",
+   "surnameEn": "Gadamurov",
    "teip": "Саханхой",
    "tukkhum": "Мелхий",
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "movladi-1",
-   "father": "askhab-1",
+   "father": "akhmed-1",
    "nameRu": "МОВЛАДИ",
    "nameEn": "Movladi",
    "surnameRu": "",
@@ -1486,15 +1325,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "moltgiri-1",
-   "father": "askhab-1",
+   "father": "akhmed-1",
    "nameRu": "МОЛТГИРИ",
    "nameEn": "Moltgiri",
    "surnameRu": "",
@@ -1504,15 +1341,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "akhmad-1",
-   "father": "askhab-1",
+   "father": "akhmed-1",
    "nameRu": "АХМАД",
    "nameEn": "Akhmad",
    "surnameRu": "",
@@ -1522,15 +1357,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "ramzan-2",
-   "father": "askhab-1",
+   "father": "akhmed-1",
    "nameRu": "РАМЗАН",
    "nameEn": "Ramzan",
    "surnameRu": "",
@@ -1540,11 +1373,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "is-1",
@@ -1558,11 +1389,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "bilan-1",
@@ -1576,11 +1405,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "mohmad-2",
@@ -1594,11 +1421,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "akhmed-2",
@@ -1612,11 +1437,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "umar-3",
@@ -1630,11 +1453,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "mukhazhar-1",
@@ -1648,15 +1469,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "bekhan-1",
-   "father": "is-1",
+   "father": "askhab-1",
    "nameRu": "БЕКХАН",
    "nameEn": "Bekkhan",
    "surnameRu": "",
@@ -1666,15 +1485,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "amirkhan-1",
-   "father": "is-1",
+   "father": "askhab-1",
    "nameRu": "АМИРХАН",
    "nameEn": "Amirkhan",
    "surnameRu": "",
@@ -1684,15 +1501,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "musa-3",
-   "father": "is-1",
+   "father": "askhab-1",
    "nameRu": "МУСА",
    "nameEn": "Musa",
    "surnameRu": "",
@@ -1702,15 +1517,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "isa-1",
-   "father": "is-1",
+   "father": "askhab-1",
    "nameRu": "ИСА",
    "nameEn": "Isa",
    "surnameRu": "",
@@ -1720,15 +1533,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "zyalmakh-1",
-   "father": "is-1",
+   "father": "askhab-1",
    "nameRu": "ЗЯЛМАХ",
    "nameEn": "Zyalmakh",
    "surnameRu": "",
@@ -1738,15 +1549,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "aslan-1",
-   "father": "is-1",
+   "father": "askhab-1",
    "nameRu": "АСЛАН",
    "nameEn": "Aslan",
    "surnameRu": "",
@@ -1756,17 +1565,15 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "paydmr-2-1",
    "father": "sutrg-1",
-   "nameRu": "ПАЙДМР (II)",
-   "nameEn": "Paydmr (II)",
+   "nameRu": "ГӀАЙДМР (II)",
+   "nameEn": "Ghaydmr (II)",
    "surnameRu": "",
    "surnameEn": "",
    "teip": "Саханхой",
@@ -1774,11 +1581,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
-   "nameConfidence": "medium",
+   "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "lur-ala-1",
@@ -1792,15 +1597,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "aladuin-1",
-   "father": "lur-ala-1",
+   "father": "basa-1",
    "nameRu": "АЛАДУИН",
    "nameEn": "Aladuin",
    "surnameRu": "",
@@ -1810,29 +1613,25 @@
    "birth": "1917",
    "death": "1944",
    "notes": "Погиб в Великой Отечественной войне",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "ahmad-2",
-   "father": "lur-ala-1",
+   "father": "basa-1",
    "nameRu": "АХЬМАД",
    "nameEn": "Ahmad",
-   "surnameRu": "",
-   "surnameEn": "",
+   "surnameRu": "Гадамуров",
+   "surnameEn": "Gadamurov",
    "teip": "Саханхой",
    "tukkhum": "Мелхий",
    "birth": "1927",
    "death": "2007",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "adam-1",
@@ -1846,11 +1645,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "tukhan-2",
@@ -1864,11 +1661,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "ruaslan-1",
@@ -1882,11 +1677,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "gala-1",
@@ -1900,15 +1693,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "vakha-2",
-   "father": "gala-1",
+   "father": "basa-1",
    "nameRu": "ВАХА",
    "nameEn": "Vakha",
    "surnameRu": "Гадамуров",
@@ -1918,11 +1709,9 @@
    "birth": "1915",
    "death": "1981",
    "notes": "Участник ВОВ, офицер",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "sultan-2",
@@ -1936,11 +1725,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "beslan-2",
@@ -1954,11 +1741,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "tarkhan-1",
@@ -1972,11 +1757,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "saliman-1",
@@ -1990,11 +1773,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "sulumbek-1",
@@ -2008,11 +1789,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "basa-1",
@@ -2026,11 +1805,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "magomed-1",
@@ -2044,11 +1821,9 @@
    "birth": "1918",
    "death": "1969",
    "notes": "Участник ВОВ",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "khusein-2",
@@ -2062,15 +1837,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "mohmad-3",
-   "father": "magomed-1",
+   "father": "khusein-2",
    "nameRu": "МОХЬМАД",
    "nameEn": "Mohmad",
    "surnameRu": "",
@@ -2080,15 +1853,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "osman-1",
-   "father": "magomed-1",
+   "father": "khusein-2",
    "nameRu": "ОСМАН",
    "nameEn": "Osman",
    "surnameRu": "",
@@ -2098,15 +1869,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "batyr-1",
-   "father": "magomed-1",
+   "father": "khusein-2",
    "nameRu": "БАТЫР",
    "nameEn": "Batyr",
    "surnameRu": "",
@@ -2116,11 +1885,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "kushik-1",
@@ -2134,15 +1901,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "mut-ala-1",
-   "father": "kushik-1",
+   "father": "basa-1",
    "nameRu": "МУТ-АЛА",
    "nameEn": "Mut-Ala",
    "surnameRu": "",
@@ -2152,11 +1917,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "dulig-1",
@@ -2170,11 +1933,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "pincho-1",
@@ -2188,11 +1949,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "girg-1",
@@ -2206,11 +1965,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "movla-1",
@@ -2224,11 +1981,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "mustafa-1",
@@ -2242,11 +1997,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "movlatgiri-1",
@@ -2260,11 +2013,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "mukharbek-1",
@@ -2278,11 +2029,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "ahdan-1",
@@ -2296,11 +2045,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "mahdan-1",
@@ -2314,11 +2061,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "mamaig-1",
@@ -2332,11 +2077,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "khusen-1",
@@ -2350,11 +2093,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "khasan-3",
@@ -2368,11 +2109,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "ahmad-3",
@@ -2386,11 +2125,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "khanpash-1",
@@ -2404,11 +2141,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "ahyad-2",
@@ -2422,11 +2157,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "mahmud-1",
@@ -2440,11 +2173,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "adam-2",
@@ -2458,17 +2189,15 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "toch-1",
-   "father": "dulig-1",
-   "nameRu": "ТОЧ",
-   "nameEn": "Toch",
+   "father": "albaq-1",
+   "nameRu": "ТОЧ (II)",
+   "nameEn": "Toch (II)",
    "surnameRu": "",
    "surnameEn": "",
    "teip": "Саханхой",
@@ -2476,15 +2205,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "solts-1",
-   "father": "toch-1",
+   "father": "pmrryv9bg1x3dg",
    "nameRu": "СОЛЦ",
    "nameEn": "Solts",
    "surnameRu": "Гадамаури",
@@ -2494,83 +2221,73 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
-   "nameConfidence": "medium",
+   "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "shakhmarz-1",
    "father": "solts-1",
    "nameRu": "ШАХМАРЗ",
    "nameEn": "Shakhmarz",
-   "surnameRu": "",
-   "surnameEn": "",
+   "surnameRu": "Гадамаури",
+   "surnameEn": "Gadamauri",
    "teip": "Саханхой",
    "tukkhum": "Мелхий",
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "umar-4",
    "father": "shakhmarz-1",
    "nameRu": "УМАР",
    "nameEn": "Umar",
-   "surnameRu": "",
-   "surnameEn": "",
+   "surnameRu": "Гадамаури",
+   "surnameEn": "Gadamauri",
    "teip": "Саханхой",
    "tukkhum": "Мелхий",
-   "birth": "",
+   "birth": "1969-05-08",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "ali-4",
    "father": "shakhmarz-1",
    "nameRu": "АЛИ",
    "nameEn": "Ali",
-   "surnameRu": "",
-   "surnameEn": "",
+   "surnameRu": "Шахмурзаев",
+   "surnameEn": "Shahmurzaev",
    "teip": "Саханхой",
    "tukkhum": "Мелхий",
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "shakhgiri-1",
    "father": "solts-1",
    "nameRu": "ШАХГИРИ",
    "nameEn": "Shakhgiri",
-   "surnameRu": "",
-   "surnameEn": "",
+   "surnameRu": "Гадамаури",
+   "surnameEn": "Gadamauri",
    "teip": "Саханхой",
    "tukkhum": "Мелхий",
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "alikhan-1",
@@ -2584,11 +2301,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "arbi-1",
@@ -2602,11 +2317,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "isa-2",
@@ -2620,29 +2333,25 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "zyalmakh-2",
    "father": "shakhgiri-1",
    "nameRu": "ЗЯЛМАХ",
    "nameEn": "Zyalmakh",
-   "surnameRu": "",
-   "surnameEn": "",
+   "surnameRu": "Гадамаури",
+   "surnameEn": "Gadamauri",
    "teip": "Саханхой",
    "tukkhum": "Мелхий",
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": ""
   },
   {
    "id": "zaur-1",
@@ -2656,11 +2365,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "bahig-1",
@@ -2674,11 +2381,9 @@
    "birth": "1845",
    "death": "1935",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
-   "linkConfidence": "unverified",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "linkConfidence": "chart",
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "baysolt-1",
@@ -2689,14 +2394,12 @@
    "surnameEn": "",
    "teip": "Саханхой",
    "tukkhum": "Мелхий",
-   "birth": "1898",
+   "birth": "1892",
    "death": "1932",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "dazi-1",
@@ -2710,11 +2413,9 @@
    "birth": "1925",
    "death": "1961",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "yaragi-1",
@@ -2728,11 +2429,9 @@
    "birth": "",
    "death": "",
    "notes": "Составитель родословной",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "eldar-1",
@@ -2746,11 +2445,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
-   "nameConfidence": "medium",
+   "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "adam-3",
@@ -2764,11 +2461,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
-   "nameConfidence": "medium",
+   "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "mukharbek-2",
@@ -2782,11 +2477,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "albert-1",
@@ -2800,11 +2493,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
-   "nameConfidence": "medium",
+   "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "marvan-1",
@@ -2818,11 +2509,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
-   "nameConfidence": "medium",
+   "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "ruslan-3",
@@ -2836,11 +2525,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "asladin-1",
@@ -2854,11 +2541,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
-   "nameConfidence": "medium",
+   "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "islam-1",
@@ -2872,11 +2557,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
-   "nameConfidence": "medium",
+   "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "daud-1",
@@ -2890,15 +2573,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "alya-1",
-   "father": "daud-1",
+   "father": "ruslan-3",
    "nameRu": "АЛЬЯ",
    "nameEn": "Alya",
    "surnameRu": "",
@@ -2908,15 +2589,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
-   "nameConfidence": "medium",
+   "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "amir-1",
-   "father": "daud-1",
+   "father": "ruslan-3",
    "nameRu": "АМИР",
    "nameEn": "Amir",
    "surnameRu": "",
@@ -2926,15 +2605,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
-   "nameConfidence": "medium",
+   "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "bilan-2",
-   "father": "daud-1",
+   "father": "ruslan-3",
    "nameRu": "БИЛАН",
    "nameEn": "Bilan",
    "surnameRu": "",
@@ -2944,11 +2621,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
-   "nameConfidence": "medium",
+   "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "abu-1",
@@ -2962,15 +2637,13 @@
    "birth": "1900",
    "death": "1937",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "elig-2-1",
-   "father": "bahig-1",
+   "father": "toch-1",
    "nameRu": "ЭЛИГ (II)",
    "nameEn": "Elig (II)",
    "surnameRu": "",
@@ -2978,19 +2651,17 @@
    "teip": "Саханхой",
    "tukkhum": "Мелхий",
    "birth": "",
-   "death": "1944",
-   "notes": "Умер 23.02.1944",
-   "photo": "",
+   "death": "1944-02-23",
+   "notes": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "poysolt-1",
    "father": "elig-2-1",
-   "nameRu": "ПОЙСОЛТ",
-   "nameEn": "Poysolt",
+   "nameRu": "ГlОЙСОЛТ",
+   "nameEn": "Ghoysolt",
    "surnameRu": "",
    "surnameEn": "",
    "teip": "Саханхой",
@@ -2998,17 +2669,15 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
-   "nameConfidence": "high",
+   "nameConfidence": "medium",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "poysi-1",
    "father": "elig-2-1",
-   "nameRu": "ПОЙСИ",
-   "nameEn": "Poysi",
+   "nameRu": "ГlОЙСИ",
+   "nameEn": "Ghoysi",
    "surnameRu": "",
    "surnameEn": "",
    "teip": "Саханхой",
@@ -3016,17 +2685,15 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
-   "nameConfidence": "high",
+   "nameConfidence": "medium",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "poy-marz-1",
    "father": "elig-2-1",
-   "nameRu": "ПОЙ-МАРЗ",
-   "nameEn": "Poy-Marz",
+   "nameRu": "ГlОЙ-МАРЗ",
+   "nameEn": "Ghoy-Marz",
    "surnameRu": "",
    "surnameEn": "",
    "teip": "Саханхой",
@@ -3034,15 +2701,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
-   "nameConfidence": "high",
+   "nameConfidence": "medium",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "labz-1",
-   "father": "bahig-1",
+   "father": "toch-1",
    "nameRu": "ЛАБЗ",
    "nameEn": "Labz",
    "surnameRu": "",
@@ -3052,11 +2717,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "saparbek-1",
@@ -3070,15 +2733,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "zhets-1",
-   "father": "bahig-1",
+   "father": "toch-1",
    "nameRu": "ЖЕЦ",
    "nameEn": "Zhets",
    "surnameRu": "",
@@ -3088,11 +2749,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "gis-1",
@@ -3106,15 +2765,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "ahmad-4",
-   "father": "gis-1",
+   "father": "betr-1",
    "nameRu": "АХЬМАД",
    "nameEn": "Ahmad",
    "surnameRu": "Бетаров",
@@ -3124,11 +2781,9 @@
    "birth": "1900",
    "death": "1967",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "vakha-3",
@@ -3142,15 +2797,13 @@
    "birth": "1957",
    "death": "1975",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "bibolt-1",
-   "father": "ahmad-4",
+   "father": "betr-1",
    "nameRu": "БИБОЛТ",
    "nameEn": "Bibolt",
    "surnameRu": "",
@@ -3160,15 +2813,13 @@
    "birth": "",
    "death": "",
    "notes": "Погиб в Великой Отечественной войне",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "mohmad-4",
-   "father": "bibolt-1",
+   "father": "ahmad-4",
    "nameRu": "МОХЬМАД",
    "nameEn": "Mohmad",
    "surnameRu": "",
@@ -3178,15 +2829,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "betr-1",
-   "father": "bahig-1",
+   "father": "toch-1",
    "nameRu": "БЕТР",
    "nameEn": "Betr",
    "surnameRu": "Гадамаури",
@@ -3196,15 +2845,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "said-mohmad-1",
-   "father": "betr-1",
+   "father": "mohmad-4",
    "nameRu": "САИД-МОХЬМАД",
    "nameEn": "Said-Mohmad",
    "surnameRu": "",
@@ -3214,15 +2861,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "khamzat-2",
-   "father": "betr-1",
+   "father": "mohmad-4",
    "nameRu": "ХАМЗАТ",
    "nameEn": "Khamzat",
    "surnameRu": "",
@@ -3232,15 +2877,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "adrahman-1",
-   "father": "betr-1",
+   "father": "mohmad-4",
    "nameRu": "АДРАХЬМАН",
    "nameEn": "Adrahman",
    "surnameRu": "",
@@ -3250,15 +2893,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "shamil-1",
-   "father": "betr-1",
+   "father": "mohmad-4",
    "nameRu": "ШАМИЛЬ",
    "nameEn": "Shamil",
    "surnameRu": "",
@@ -3268,15 +2909,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "deni-1",
-   "father": "betr-1",
+   "father": "mohmad-4",
    "nameRu": "ДЕНИ",
    "nameEn": "Deni",
    "surnameRu": "",
@@ -3286,17 +2925,15 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "ias-1",
    "father": "dulig-1",
-   "nameRu": "ИАС",
-   "nameEn": "Ias",
+   "nameRu": "ӀИС",
+   "nameEn": "'Is",
    "surnameRu": "",
    "surnameEn": "",
    "teip": "Саханхой",
@@ -3304,29 +2941,25 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "edl-solt-1",
    "father": "ias-1",
    "nameRu": "ЭДЛ-СОЛТ",
    "nameEn": "Edl-Solt",
-   "surnameRu": "",
-   "surnameEn": "",
+   "surnameRu": "Исаев",
+   "surnameEn": "Isaev",
    "teip": "Саханхой",
    "tukkhum": "Мелхий",
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "idalbi-1",
@@ -3340,11 +2973,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "umatgiri-1",
@@ -3358,15 +2989,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "movldi-1",
-   "father": "umatgiri-1",
+   "father": "ias-1",
    "nameRu": "МОВЛДИ",
    "nameEn": "Movldi",
    "surnameRu": "",
@@ -3376,15 +3005,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "alavdi-1",
-   "father": "umatgiri-1",
+   "father": "ias-1",
    "nameRu": "АЛАВДИ",
    "nameEn": "Alavdi",
    "surnameRu": "",
@@ -3394,47 +3021,41 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "ramzan-3",
    "father": "umatgiri-1",
    "nameRu": "РАМЗАН",
    "nameEn": "Ramzan",
-   "surnameRu": "",
-   "surnameEn": "",
+   "surnameRu": "Исаев",
+   "surnameEn": "Isaev",
    "teip": "Саханхой",
    "tukkhum": "Мелхий",
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
-   "nameConfidence": "medium",
+   "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.) <Подтверждено Б.Г.>"
   },
   {
    "id": "rizvan-1",
    "father": "umatgiri-1",
    "nameRu": "РИЗВАН",
    "nameEn": "Rizvan",
-   "surnameRu": "",
-   "surnameEn": "",
+   "surnameRu": "Исаев",
+   "surnameEn": "Isaev",
    "teip": "Саханхой",
    "tukkhum": "Мелхий",
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
-   "nameConfidence": "medium",
+   "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Тет"
+   "source": ""
   },
   {
    "id": "bapkhu-1",
@@ -3448,11 +3069,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "katsar-1",
@@ -3466,11 +3085,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "betsash-1",
@@ -3484,11 +3101,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "hunakhk-2-1",
@@ -3502,11 +3117,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "alkhast-1",
@@ -3520,11 +3133,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "yunus-2",
@@ -3538,17 +3149,15 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "mamaig-2",
    "father": "yunus-2",
-   "nameRu": "МАМАИГ",
-   "nameEn": "Mamaig",
+   "nameRu": "МАМАЙГ",
+   "nameEn": "Mamayg",
    "surnameRu": "Гадамаури",
    "surnameEn": "Gadamauri",
    "teip": "Саханхой",
@@ -3556,11 +3165,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "movli-1",
@@ -3574,11 +3181,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "movldi-2",
@@ -3592,11 +3197,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "adani-1",
@@ -3610,11 +3213,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "movlid-1",
@@ -3628,11 +3229,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "aslan-2",
@@ -3646,11 +3245,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "anzor-1",
@@ -3664,11 +3261,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "husen-1",
@@ -3682,11 +3277,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "lomali-1",
@@ -3700,11 +3293,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "bayali-1",
@@ -3718,17 +3309,15 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "gudi-1",
    "father": "hunakhk-2-1",
-   "nameRu": "ГУДИ",
-   "nameEn": "Gudi",
+   "nameRu": "ГӀУДИ",
+   "nameEn": "Ghudi",
    "surnameRu": "Гадамаури",
    "surnameEn": "Gadamauri",
    "teip": "Саханхой",
@@ -3736,11 +3325,9 @@
    "birth": "",
    "death": "",
    "notes": "Участник 1-й мировой войны. Умер в 1948 г., было около 100 лет",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "tousolt-1",
@@ -3754,33 +3341,29 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "gairbek-1",
    "father": "gudi-1",
    "nameRu": "ГАИРБЕК",
    "nameEn": "Gairbek",
-   "surnameRu": "Гудиев",
-   "surnameEn": "Gudiev",
+   "surnameRu": "",
+   "surnameEn": "",
    "teip": "Саханхой",
    "tukkhum": "Мелхий",
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "musa-4",
-   "father": "gairbek-1",
+   "father": "pmrthcvbphyqc0",
    "nameRu": "МУСА",
    "nameEn": "Musa",
    "surnameRu": "",
@@ -3790,15 +3373,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "vakha-4",
-   "father": "gairbek-1",
+   "father": "pmrthcvbphyqc0",
    "nameRu": "ВАХА",
    "nameEn": "Vakha",
    "surnameRu": "",
@@ -3808,15 +3389,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "arbi-2",
-   "father": "gairbek-1",
+   "father": "pmrthcvbphyqc0",
    "nameRu": "АРБИ",
    "nameEn": "Arbi",
    "surnameRu": "",
@@ -3826,15 +3405,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "adam-4",
-   "father": "gairbek-1",
+   "father": "pmrthcvbphyqc0",
    "nameRu": "АДАМ",
    "nameEn": "Adam",
    "surnameRu": "",
@@ -3844,15 +3421,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "bukhari-1",
-   "father": "gairbek-1",
+   "father": "pmrthcvbphyqc0",
    "nameRu": "БУХАРИ",
    "nameEn": "Bukhari",
    "surnameRu": "",
@@ -3862,11 +3437,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "garsolt-1",
@@ -3880,11 +3453,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "lechi-3",
@@ -3898,11 +3469,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "lema-1",
@@ -3916,17 +3485,15 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "pumki-1",
    "father": "garsolt-1",
-   "nameRu": "ПУМКИ",
-   "nameEn": "Pumki",
+   "nameRu": "ГӀУМКИ",
+   "nameEn": "Ghumki",
    "surnameRu": "",
    "surnameEn": "",
    "teip": "Саханхой",
@@ -3934,11 +3501,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
-   "nameConfidence": "low",
+   "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "chersi-1",
@@ -3952,17 +3517,15 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "khiiri-1",
    "father": "garsolt-1",
-   "nameRu": "ХИИРИ",
-   "nameEn": "Khiiri",
+   "nameRu": "ХӀИРИ",
+   "nameEn": "Hiri",
    "surnameRu": "",
    "surnameEn": "",
    "teip": "Саханхой",
@@ -3970,11 +3533,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "ghalbi-1",
@@ -3988,11 +3549,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "kyuri-1",
@@ -4006,29 +3565,25 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "kutsh-1",
-   "father": "hunakhk-2-1",
+   "father": "albaq-1",
    "nameRu": "КУТШ",
    "nameEn": "Kutsh",
-   "surnameRu": "",
-   "surnameEn": "",
+   "surnameRu": "Гадамаури",
+   "surnameEn": "Gadamauri",
    "teip": "Саханхой",
    "tukkhum": "Мелхий",
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
-   "linkConfidence": "unverified",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "linkConfidence": "chart",
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "gat-1",
@@ -4042,11 +3597,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "marz-1",
@@ -4060,29 +3613,25 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "khalid-1",
-   "father": "gat-1",
+   "father": "marz-1",
    "nameRu": "ХАЛИД",
    "nameEn": "Khalid",
-   "surnameRu": "",
-   "surnameEn": "",
+   "surnameRu": "Албаков",
+   "surnameEn": "Albakov",
    "teip": "Саханхой",
    "tukkhum": "Мелхий",
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "dzhets-1",
@@ -4096,29 +3645,25 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "beksolt-1",
-   "father": "dzhets-1",
+   "father": "gat-1",
    "nameRu": "БЕКСОЛТ",
    "nameEn": "Beksolt",
-   "surnameRu": "Албанов",
-   "surnameEn": "Albanov",
+   "surnameRu": "Албаков",
+   "surnameEn": "Albakov",
    "teip": "Саханхой",
    "tukkhum": "Мелхий",
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "ahmi-2",
@@ -4132,11 +3677,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "alikhan-2",
@@ -4150,11 +3693,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "ali-5",
@@ -4168,15 +3709,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "khalberd-1",
-   "father": "dzhets-1",
+   "father": "khalid-1",
    "nameRu": "ХАЛБЕРД",
    "nameEn": "Khalberd",
    "surnameRu": "",
@@ -4186,15 +3725,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "kharon-1",
-   "father": "dzhets-1",
+   "father": "khalid-1",
    "nameRu": "ХАРОН",
    "nameEn": "Kharon",
    "surnameRu": "",
@@ -4204,15 +3741,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "khizir-1",
-   "father": "dzhets-1",
+   "father": "khalid-1",
    "nameRu": "ХИЗИР",
    "nameEn": "Khizir",
    "surnameRu": "",
@@ -4222,15 +3757,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "hamid-1",
-   "father": "dzhets-1",
+   "father": "khalid-1",
    "nameRu": "ХЬАМИД",
    "nameEn": "Hamid",
    "surnameRu": "",
@@ -4240,33 +3773,29 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "ich-1",
    "father": "kutsh-1",
    "nameRu": "ИЧ",
    "nameEn": "Ich",
-   "surnameRu": "Гадамаури",
-   "surnameEn": "Gadamauri",
+   "surnameRu": "",
+   "surnameEn": "",
    "teip": "Саханхой",
    "tukkhum": "Мелхий",
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "mahm-1",
-   "father": "ich-1",
+   "father": "dzhets-1",
    "nameRu": "МАХЬМ",
    "nameEn": "Mahm",
    "surnameRu": "Магамаев",
@@ -4276,11 +3805,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "ahyad-3",
@@ -4294,11 +3821,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "nuh-1",
@@ -4312,11 +3837,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "arbi-3",
@@ -4330,11 +3853,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "ali-6",
@@ -4348,15 +3869,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "adrahman-2",
-   "father": "mahm-1",
+   "father": "mukhtr-1",
    "nameRu": "АДРАХЬМАН",
    "nameEn": "Adrahman",
    "surnameRu": "",
@@ -4366,15 +3885,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "zambek-1",
-   "father": "mahm-1",
+   "father": "mukhtr-1",
    "nameRu": "ЗАМБЕК",
    "nameEn": "Zambek",
    "surnameRu": "",
@@ -4384,15 +3901,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "ruslan-4",
-   "father": "mahm-1",
+   "father": "mukhtr-1",
    "nameRu": "РУСЛАН",
    "nameEn": "Ruslan",
    "surnameRu": "",
@@ -4402,17 +3917,15 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "muhmad-1",
-   "father": "mahm-1",
-   "nameRu": "МУХЬМАД",
-   "nameEn": "Muhmad",
+   "father": "mukhtr-1",
+   "nameRu": "МУХЬМД",
+   "nameEn": "Muhmd",
    "surnameRu": "",
    "surnameEn": "",
    "teip": "Саханхой",
@@ -4420,15 +3933,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "sulumbek-2",
-   "father": "mahm-1",
+   "father": "mukhtr-1",
    "nameRu": "СУЛУМБЕК",
    "nameEn": "Sulumbek",
    "surnameRu": "",
@@ -4438,11 +3949,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "zdi-1",
@@ -4456,15 +3965,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "hauk-1",
-   "father": "zdi-1",
+   "father": "ich-1",
    "nameRu": "ХЬАУКЬ",
    "nameEn": "Hauk",
    "surnameRu": "",
@@ -4474,15 +3981,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "mukhtr-1",
-   "father": "hauk-1",
+   "father": "mahm-1",
    "nameRu": "МУХТР",
    "nameEn": "Mukhtr",
    "surnameRu": "",
@@ -4492,15 +3997,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "matosh-1",
-   "father": "mukhtr-1",
+   "father": "murtz-1",
    "nameRu": "МАТОШ",
    "nameEn": "Matosh",
    "surnameRu": "",
@@ -4510,15 +4013,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "idris-1",
-   "father": "mukhtr-1",
+   "father": "murtz-1",
    "nameRu": "ИДРИС",
    "nameEn": "Idris",
    "surnameRu": "",
@@ -4528,15 +4029,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "ilez-2",
-   "father": "mukhtr-1",
+   "father": "murtz-1",
    "nameRu": "ИЛЕЗ",
    "nameEn": "Ilez",
    "surnameRu": "",
@@ -4546,15 +4045,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "murtz-1",
-   "father": "zdi-1",
+   "father": "mahm-1",
    "nameRu": "МУРТЗ",
    "nameEn": "Murtz",
    "surnameRu": "",
@@ -4564,15 +4061,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
-   "linkConfidence": "unverified",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "linkConfidence": "chart",
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "timur-1",
-   "father": "murtz-1",
+   "father": "adrahman-2",
    "nameRu": "ТИМУР",
    "nameEn": "Timur",
    "surnameRu": "",
@@ -4582,15 +4077,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "akhmed-3",
-   "father": "murtz-1",
+   "father": "adrahman-2",
    "nameRu": "АХМЕД",
    "nameEn": "Akhmed",
    "surnameRu": "",
@@ -4600,15 +4093,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "askhab-2",
-   "father": "akhmed-3",
+   "father": "timur-1",
    "nameRu": "АСХАБ",
    "nameEn": "Askhab",
    "surnameRu": "",
@@ -4618,15 +4109,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "isa-3",
-   "father": "askhab-2",
+   "father": "ilez-2",
    "nameRu": "ИСА",
    "nameEn": "Isa",
    "surnameRu": "",
@@ -4636,11 +4125,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "martz-1",
@@ -4654,11 +4141,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "belaq-1",
@@ -4672,29 +4157,25 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "mus-1",
    "father": "belaq-1",
    "nameRu": "МУС",
    "nameEn": "Mus",
-   "surnameRu": "Албанов",
-   "surnameEn": "Albanov",
+   "surnameRu": "Албаков",
+   "surnameEn": "Albakov",
    "teip": "Саханхой",
    "tukkhum": "Мелхий",
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "taisam-2",
@@ -4708,11 +4189,9 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "ruslan-5",
@@ -4726,15 +4205,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "musa-5",
-   "father": "ruslan-5",
+   "father": "matosh-1",
    "nameRu": "МУСА",
    "nameEn": "Musa",
    "surnameRu": "",
@@ -4744,15 +4221,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "muslim-1",
-   "father": "ruslan-5",
+   "father": "idris-1",
    "nameRu": "МУСЛИМ",
    "nameEn": "Muslim",
    "surnameRu": "",
@@ -4762,15 +4237,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "timur-2",
-   "father": "ruslan-5",
+   "father": "idris-1",
    "nameRu": "ТИМУР",
    "nameEn": "Timur",
    "surnameRu": "",
@@ -4780,15 +4253,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "alkhazur-1",
-   "father": "ruslan-5",
+   "father": "idris-1",
    "nameRu": "АЛХАЗУР",
    "nameEn": "Alkhazur",
    "surnameRu": "",
@@ -4798,15 +4269,13 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   },
   {
    "id": "hunsag-1",
-   "father": "ruslan-5",
+   "father": "idris-1",
    "nameRu": "ХЬУНСАГ",
    "nameEn": "Hunsag",
    "surnameRu": "",
@@ -4816,11 +4285,281 @@
    "birth": "",
    "death": "",
    "notes": "",
-   "photo": "",
    "nameConfidence": "high",
    "linkConfidence": "chart",
-   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)",
-   "branch": "Бапху"
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
+  },
+  {
+   "id": "pmrryv9bg1x3dg",
+   "father": "dulig-1",
+   "nameRu": "Точ",
+   "nameEn": "Toch",
+   "surnameRu": "Гадамаури",
+   "surnameEn": "",
+   "teip": "Саханхой",
+   "tukkhum": "Мелхий",
+   "birth": "",
+   "death": "",
+   "notes": "",
+   "nameConfidence": "high",
+   "linkConfidence": "chart",
+   "source": "Added after transcription"
+  },
+  {
+   "id": "pmrs0k8lf0pq23",
+   "father": "daud-1",
+   "nameRu": "ЕДЛБЕК",
+   "nameEn": "Edlbek",
+   "surnameRu": "",
+   "surnameEn": "",
+   "teip": "Саханхой",
+   "tukkhum": "Мелхий",
+   "birth": "2001-05-23",
+   "death": "2007-12-07",
+   "notes": "",
+   "nameConfidence": "high",
+   "linkConfidence": "added",
+   "source": "Added after transcription"
+  },
+  {
+   "id": "pmrsztxq66odxj",
+   "father": "umar-4",
+   "nameRu": "МОХЬМАД",
+   "nameEn": "Mohmad",
+   "surnameRu": "Гадамаури",
+   "surnameEn": "Gadamauri",
+   "teip": "Саханхой",
+   "tukkhum": "Мелхий",
+   "birth": "1994-08-09",
+   "death": "",
+   "notes": "",
+   "nameConfidence": "high",
+   "linkConfidence": "added",
+   "source": "Added after transcription"
+  },
+  {
+   "id": "pmrszwj90fkjow",
+   "father": "umar-4",
+   "nameRu": "ТУРПАЛ",
+   "nameEn": "Turpal",
+   "surnameRu": "Гадамаури",
+   "surnameEn": "Gadamauri",
+   "teip": "Саханхой",
+   "tukkhum": "Мелхий",
+   "birth": "1997-07-07",
+   "death": "",
+   "notes": "",
+   "nameConfidence": "high",
+   "linkConfidence": "added",
+   "source": "Added after transcription"
+  },
+  {
+   "id": "pmrszz1cdjkx94",
+   "father": "umar-4",
+   "nameRu": "БУВАЙСАР",
+   "nameEn": "Buwaysar",
+   "surnameRu": "Гадамаури",
+   "surnameEn": "Gadamauri",
+   "teip": "Саханхой",
+   "tukkhum": "Мелхий",
+   "birth": "2000-07-10",
+   "death": "",
+   "notes": "",
+   "nameConfidence": "high",
+   "linkConfidence": "added",
+   "source": "Added after transcription"
+  },
+  {
+   "id": "pmrt1prqg2t3wd",
+   "father": "movl-1",
+   "nameRu": "МУСА",
+   "nameEn": "Musa",
+   "surnameRu": "",
+   "surnameEn": "",
+   "teip": "Саханхой",
+   "tukkhum": "Мелхий",
+   "birth": "",
+   "death": "",
+   "notes": "",
+   "nameConfidence": "high",
+   "linkConfidence": "chart",
+   "source": "Added after transcription"
+  },
+  {
+   "id": "pmrt1q0636qa8v",
+   "father": "movl-1",
+   "nameRu": "ИСА",
+   "nameEn": "Isa",
+   "surnameRu": "",
+   "surnameEn": "",
+   "teip": "Саханхой",
+   "tukkhum": "Мелхий",
+   "birth": "",
+   "death": "",
+   "notes": "",
+   "nameConfidence": "high",
+   "linkConfidence": "chart",
+   "source": "Added after transcription"
+  },
+  {
+   "id": "pmrt1qb096neey",
+   "father": "movl-1",
+   "nameRu": "ИСРАПИЛ",
+   "nameEn": "Israpil",
+   "surnameRu": "",
+   "surnameEn": "",
+   "teip": "Саханхой",
+   "tukkhum": "Мелхий",
+   "birth": "",
+   "death": "",
+   "notes": "",
+   "nameConfidence": "high",
+   "linkConfidence": "chart",
+   "source": "Added after transcription"
+  },
+  {
+   "id": "pmrt1rnt1fkkpo",
+   "father": "movl-1",
+   "nameRu": "ЖАБРАИЛ",
+   "nameEn": "Zhabrail",
+   "surnameRu": "",
+   "surnameEn": "",
+   "teip": "Саханхой",
+   "tukkhum": "Мелхий",
+   "birth": "",
+   "death": "",
+   "notes": "",
+   "nameConfidence": "high",
+   "linkConfidence": "chart",
+   "source": "Added after transcription"
+  },
+  {
+   "id": "pmrt1syglxgik3",
+   "father": "movl-1",
+   "nameRu": "ИСМАИЛ",
+   "nameEn": "Ismail",
+   "surnameRu": "",
+   "surnameEn": "",
+   "teip": "Саханхой",
+   "tukkhum": "Мелхий",
+   "birth": "",
+   "death": "",
+   "notes": "",
+   "nameConfidence": "high",
+   "linkConfidence": "chart",
+   "source": "Added after transcription"
+  },
+  {
+   "id": "pmrt1txlt1n4n5",
+   "father": "movl-1",
+   "nameRu": "ЖАЛАУДИ",
+   "nameEn": "Zhalaudi",
+   "surnameRu": "",
+   "surnameEn": "",
+   "teip": "Саханхой",
+   "tukkhum": "Мелхий",
+   "birth": "",
+   "death": "",
+   "notes": "",
+   "nameConfidence": "high",
+   "linkConfidence": "chart",
+   "source": "Added after transcription"
+  },
+  {
+   "id": "pmrt1uyu0on6vi",
+   "father": "movl-1",
+   "nameRu": "АЛАУДИ",
+   "nameEn": "Alaudi",
+   "surnameRu": "",
+   "surnameEn": "",
+   "teip": "Саханхой",
+   "tukkhum": "Мелхий",
+   "birth": "",
+   "death": "",
+   "notes": "",
+   "nameConfidence": "medium",
+   "linkConfidence": "unverified",
+   "source": "Added after transcription"
+  },
+  {
+   "id": "pmrt6cnzubjd0p",
+   "father": "rizvan-1",
+   "nameRu": "АСЛАН",
+   "nameEn": "Aslan",
+   "surnameRu": "Исаев",
+   "surnameEn": "Isaev",
+   "teip": "Саханхой",
+   "tukkhum": "Мелхий",
+   "birth": "",
+   "death": "",
+   "notes": "",
+   "nameConfidence": "high",
+   "linkConfidence": "added",
+   "source": "<Подтверждено Б.Г.>"
+  },
+  {
+   "id": "pmrt6ov7cbify1",
+   "father": "ali-4",
+   "nameRu": "МУХЬАМЕД-АЛИ",
+   "nameEn": "Muhamed-Ali",
+   "surnameRu": "Шахмурзаев",
+   "surnameEn": "Shahmurzaev",
+   "teip": "Саханхой",
+   "tukkhum": "Мелхий",
+   "birth": "",
+   "death": "",
+   "notes": "",
+   "nameConfidence": "high",
+   "linkConfidence": "added",
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.) <Подтверждено Б.Г.>"
+  },
+  {
+   "id": "pmrt6q9ypwqr7p",
+   "father": "ali-4",
+   "nameRu": "АЗАМАТ",
+   "nameEn": "Azamat",
+   "surnameRu": "Шахмурзаев",
+   "surnameEn": "Shahmurzaev",
+   "teip": "Саханхой",
+   "tukkhum": "Мелхий",
+   "birth": "",
+   "death": "",
+   "notes": "",
+   "nameConfidence": "high",
+   "linkConfidence": "added",
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.) <Подтверждено Б.Г.>"
+  },
+  {
+   "id": "pmrt6wiid7ltz6",
+   "father": "khanpash-1",
+   "nameRu": "ШАХЬБОЛТ",
+   "nameEn": "Shahbolt",
+   "surnameRu": "Гадамаури",
+   "surnameEn": "Gadamauri",
+   "teip": "Саханхой",
+   "tukkhum": "Мелхий",
+   "birth": "",
+   "death": "",
+   "notes": "",
+   "nameConfidence": "high",
+   "linkConfidence": "added",
+   "source": "Подтверждено Б.Г."
+  },
+  {
+   "id": "pmrthcvbphyqc0",
+   "father": "gudi-1",
+   "nameRu": "АБЗУ",
+   "nameEn": "Abzu",
+   "surnameRu": "Гудиев",
+   "surnameEn": "Gudiev",
+   "teip": "Саханхой",
+   "tukkhum": "Мелхий",
+   "birth": "",
+   "death": "",
+   "notes": "",
+   "nameConfidence": "high",
+   "linkConfidence": "chart",
+   "source": "Родословная тейпа Саханхой, сост. Гадамаури Яраги Дазиевич (сбор с 1965 г.)"
   }
  ]
 }
