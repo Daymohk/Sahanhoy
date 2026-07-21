@@ -1,4 +1,4 @@
-# Sahanhoy Lineage — Visitor Guide
+#  How to use — Как использовать 
 
 ## English
 
