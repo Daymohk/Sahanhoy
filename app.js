@@ -249,7 +249,7 @@ const I18N = {
 let LANG = 'en';
 const t = k => (I18N[LANG] && I18N[LANG][k]) || I18N.en[k] || k;
 
-const FIELD_KEYS = ['family','teip','tukkhum','lived','age','generation','sons','line','notes','source','flags'];
+const FIELD_KEYS = ['family','lived','age','generation','sons','line','notes','source','flags'];
 
 function applyLang(){
   document.documentElement.lang = LANG;
@@ -356,7 +356,7 @@ function loadRaw(){
 }
 const normalise = raw => raw.people.map(p=>({
   id:p.id, fatherId:p.father||null, nameRu:p.nameRu||'', nameEn:p.nameEn||'',
-  family:p.surnameRu||'', familyEn:p.surnameEn||'', teip:p.teip||'', tukkhum:p.tukkhum||'',
+  family:p.surnameRu||'', familyEn:p.surnameEn||'', teip:p.teip||'',
   birth:p.birth||'', death:p.death||'', notes:p.notes||'',
   linkConfidence:p.linkConfidence||'chart', nameConfidence:p.nameConfidence||'high',
   source:p.source||'', status:'confirmed'
@@ -365,7 +365,7 @@ const denormalise = () => ({
   meta:Object.assign({}, baseData.meta, {version:(baseData.meta.version||1)+1, exported:nowISO()}),
   people:state.people.map(p=>({
     id:p.id, father:p.fatherId, nameRu:p.nameRu, nameEn:p.nameEn,
-    surnameRu:p.family, surnameEn:p.familyEn, teip:p.teip, tukkhum:p.tukkhum,
+    surnameRu:p.family, surnameEn:p.familyEn, teip:p.teip,
     birth:p.birth, death:p.death, notes:p.notes,
     nameConfidence:p.nameConfidence, linkConfidence:p.linkConfidence, source:p.source
   }))
@@ -376,7 +376,7 @@ function buildTags(){
     const used=new Set(Object.values(map).map(v=>v.color));
     map[name]={color:PALETTE.find(c=>!used.has(c))||PALETTE[Object.keys(map).length%PALETTE.length]};
   };
-  state.people.forEach(p=>{ add(state.tags.families,p.family); add(state.tags.teips,p.teip); add(state.tags.tukkhums,p.tukkhum); });
+  state.people.forEach(p=>{ add(state.tags.families,p.family); add(state.tags.teips,p.teip); });
 }
 function applyEdits(){
   const list = normalise(baseData);
@@ -877,8 +877,6 @@ function renderSelects(){
   addFatherCombo = buildCombo($('p_fatherCombo'), keep, ()=>{});
   refreshSourceList();
   fillSelect($('p_family'), state.tags.families, 'Гадамаури');
-  fillSelect($('p_teip'), state.tags.teips, 'Саханхой');
-  fillSelect($('p_tukkhum'), state.tags.tukkhums, 'Мелхий');
 }
 
 /* Legends are inclusive filters: pick one or more to show only those,
@@ -902,16 +900,14 @@ const countBy = key => { const c={}; state.people.forEach(p=>{ if(p[key]) c[p[ke
 
 function renderLegends(){
   const F=state.ui.filters;
-  const fc=countBy('family'), tc=countBy('teip'), uc=countBy('tukkhum');
+  const fc=countBy('family');
   const noFam=state.people.filter(p=>!p.family).length;
-  const pickedF=new Set(F.families), pickedT=new Set(F.teips), pickedU=new Set(F.tukkhums), pickedG=new Set(F.flags);
+  const pickedF=new Set(F.families), pickedG=new Set(F.flags);
 
   $('famLegend').innerHTML = legendHtml(state.tags.families, fc, pickedF, false, any=>
     noFam ? `<div class="legend-item${pickedF.has('__none')?' picked':(any?' muted':'')}" data-name="__none">
       <span class="swatch" style="background:#7d7263"></span>
       <span class="lname">${t('noFamily')}</span><span class="lcount">${noFam}</span></div>` : '', true);
-  $('teipLegend').innerHTML = legendHtml(state.tags.teips, tc, pickedT, true);
-  $('tukLegend').innerHTML  = legendHtml(state.tags.tukkhums, uc, pickedU, true);
 
   const unver=state.people.filter(p=>p.linkConfidence==='unverified').length;
   const uncert=state.people.filter(p=>p.nameConfidence!=='high').length;
@@ -923,12 +919,9 @@ function renderLegends(){
        <span class="swatch" style="background:var(--danger)"></span><span class="lname">${t('spellingCheck')}</span><span class="lcount">${uncert}</span></div>`;
 
   $('famCount').textContent=Object.keys(state.tags.families).length;
-  $('teipCount').textContent=Object.keys(state.tags.teips).length;
-  $('tukCount').textContent=Object.keys(state.tags.tukkhums).length;
   $('flagCount').textContent=unver+uncert;
 
-  bindLegend('famLegend','families'); bindLegend('teipLegend','teips');
-  bindLegend('tukLegend','tukkhums'); bindLegend('flagList','flags');
+  bindLegend('famLegend','families'); bindLegend('flagList','flags');
 }
 function bindLegend(elId, key){
   $(elId).querySelectorAll('.lx').forEach(x=>{
@@ -959,8 +952,6 @@ function bindLegend(elId, key){
 function passesFilter(p){
   const F=state.ui.filters;
   if(F.families.length && !F.families.includes(p.family || '__none')) return false;
-  if(F.teips.length && !F.teips.includes(p.teip)) return false;
-  if(F.tukkhums.length && !F.tukkhums.includes(p.tukkhum)) return false;
   if(F.flags.length){
     const okLink = F.flags.includes('link') && p.linkConfidence==='unverified';
     const okName = F.flags.includes('name') && p.nameConfidence!=='high';
@@ -1217,7 +1208,7 @@ function addChildTo(fatherId){
   mutate({action:'added', detail:'—'}, ()=>{
     state.edits[id] = {
       nameRu:'', nameEn:'', family:fa.family||'', familyEn:fa.familyEn||'',
-      teip:fa.teip||'', tukkhum:fa.tukkhum||'', fatherId,
+      teip:fa.teip||'', fatherId,
       birth:'', death:'', notes:'',
       linkConfidence:'added', nameConfidence:'high', status:'confirmed',
       source:'Added after transcription'
@@ -1284,13 +1275,9 @@ function fieldRows(p, which){
   const keys = which==='hover' ? state.ui.hoverFields : state.ui.selectFields;
   const age = computeAge(p), kids = childrenOf(p.id).length, desc = descendantIds(p.id).length;
   const famColor=(state.tags.families[p.family]||{}).color||'#7d7263';
-  const teipColor=(state.tags.teips[p.teip]||{}).color||'#4a4034';
-  const tukColor=(state.tags.tukkhums[p.tukkhum]||{}).color||'#4a4034';
   const out=[];
   const add=(k,label,value)=>{ if(keys.includes(k) && value) out.push([label,value]); };
   add('family', t('family'), p.family ? `<span class="tt-tag"><span class="swatch" style="background:${famColor};width:10px;height:10px;border-width:1px"></span>${esc(p.family)}</span>` : '');
-  add('teip', t('teip'), `<span class="tt-tag"><span class="swatch ring" style="border-color:${teipColor};width:10px;height:10px;border-width:2px"></span>${esc(p.teip||'—')}</span>`);
-  add('tukkhum', t('tukkhum'), `<span class="tt-tag"><span class="swatch ring" style="border-color:${tukColor};width:10px;height:10px;border-width:2px"></span>${esc(p.tukkhum||'—')}</span>`);
   add('lived', t('lived'), (p.birth||p.death)
       ? (which==='select' ? `${esc(fmtDate(p.birth)||'?')} – ${esc(fmtDate(p.death)||'?')}`
                           : `${esc(yearOf(p.birth)||'?')}–${esc(yearOf(p.death)||'?')}`) : '');
@@ -1565,8 +1552,6 @@ function addPerson(){
   const rec={
     nameRu:nameRu||latToCyr(nameEn), nameEn:nameEn||cyrToLat(nameRu),
     family:pickTag('p_family','newFamRow','newFamName','newFamColor',state.tags.families), familyEn:'',
-    teip:pickTag('p_teip','newTeipRow','newTeipName','newTeipColor',state.tags.teips),
-    tukkhum:pickTag('p_tukkhum','newTukRow','newTukName','newTukColor',state.tags.tukkhums),
     fatherId:(addFatherCombo?addFatherCombo.get():null)||null,
     birth:readDateField($('p_birth')), death:readDateField($('p_death')),
     notes:$('p_notes').value.trim(),
@@ -1581,7 +1566,7 @@ function addPerson(){
 }
 
 /* ============================= EXCEL ============================= */
-const SHEET_COLS = ['id','fatherId','nameRu','nameEn','family','familyEn','teip','tukkhum',
+const SHEET_COLS = ['id','fatherId','nameRu','nameEn','family','familyEn','teip',
                     'birth','death','notes','linkConfidence','nameConfidence','source'];
 function loadSheetJS(){
   if(window.XLSX) return Promise.resolve(window.XLSX);
@@ -1792,16 +1777,22 @@ loadRaw().then(raw=>{
     people:[], edits:saved.edits||{}, positions:saved.positions||{},
     pending:saved.pending||[], audit:saved.audit||[], versions:saved.versions||[],
     passcodes:saved.passcodes||{moderator:'mod123', admin:'admin123'},
-    tags:saved.tags||{families:{},teips:{},tukkhums:{}},
+    tags:saved.tags||{families:{},teips:{}},
     ui:Object.assign({
       lang:'en', theme:'dark', editMode:false,
-      hoverFields:['family','teip','lived','age','generation','sons','flags'],
-      selectFields:['family','teip','tukkhum','lived','age','generation','line','notes','source','flags'],
-      filters:{families:[],teips:[],tukkhums:[],flags:[]}
+      hoverFields:['family','lived','age','generation','sons','flags'],
+      selectFields:['family','lived','age','generation','line','notes','source','flags'],
+      filters:{families:[],flags:[]}
     }, saved.ui||{})
   };
-  if(!state.ui.filters) state.ui.filters={families:[],teips:[],tukkhums:[],flags:[]};
+  if(!state.ui.filters) state.ui.filters={families:[],flags:[]};
   LANG=state.ui.lang||'en';
+  // Migration: drop tukkhum from any locally-saved edits and stale filter arrays
+  if(state.edits){ for(const k in state.edits){ if(state.edits[k] && 'tukkhum' in state.edits[k]) delete state.edits[k].tukkhum; } }
+  if(state.tags && state.tags.tukkhums) delete state.tags.tukkhums;
+  if(state.ui && state.ui.filters){ delete state.ui.filters.tukkhums; delete state.ui.filters.teips; }
+  if(state.ui && state.ui.hoverFields) state.ui.hoverFields = state.ui.hoverFields.filter(k=>k!=='teip'&&k!=='tukkhum');
+  if(state.ui && state.ui.selectFields) state.ui.selectFields = state.ui.selectFields.filter(k=>k!=='teip'&&k!=='tukkhum');
   currentUser=store.get(K.user,{name:'',role:'viewer'});
   if(currentUser.role==='contributor') currentUser.role='viewer';   // role withdrawn for now
   applyEdits(); buildTags();
@@ -1974,7 +1965,7 @@ function bindChrome(){
   });
 
   wireTranslit($('p_nameRu'), $('p_nameEn'));
-  [['p_family','newFamRow'],['p_teip','newTeipRow'],['p_tukkhum','newTukRow']].forEach(([sel,row])=>{
+  [['p_family','newFamRow']].forEach(([sel,row])=>{
     $(sel).addEventListener('change',e=>{ $(row).style.display=e.target.value==='__new'?'flex':'none'; });
   });
   $('addPersonBtn').onclick=addPerson;
