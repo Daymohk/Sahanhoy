@@ -585,14 +585,17 @@ function ensureSomeoneVisible(){
 }
 /* Labels grow as you zoom out and settle to a floor as you zoom in, so
    names stay legible across the whole range. */
-function labelSizes(k){
-  const span = Math.min(1, Math.max(0, (0.9 - k) / 0.74));   // 1 far out, 0 close in
-  let ru = 11 + 5.5*span;                                    // 11px close in, 16.5px far out
-  /* Never write labels bigger than the row will hold. Half the row gap
-     for the largest run (which is SPACING_Y*2 = 300 world units) is our
-     ceiling; the same rule protects the regular 150-unit rows too. */
+function labelSizes(k, depth){
+  const span = Math.min(1, Math.max(0, (0.9 - k) / 0.74));
+  let ru = 11 + 5.5*span;
   const rowGapScreen = SPACING_Y * k;
   ru = Math.min(ru, Math.max(6, rowGapScreen * 0.55));
+  /* Earlier generations use the base size; later ones step down so they
+     fit sooner without colliding. */
+  if(typeof depth === 'number' && depth > 0){
+    const shrink = Math.max(0.62, 1 - depth * 0.045);
+    ru = Math.max(6, ru * shrink);
+  }
   return {ru, en:ru*0.84, meta:ru*0.75};
 }
 /* ── Text measurement ────────────────────────────────────────────────
@@ -679,7 +682,10 @@ function visibleDepthFor(k){
    independently, and within a row the people with the most descendants
    are placed first so the trunk keeps its labels when space is tight. */
 function planLabels(positions){
-  const k = viewT.k, s = labelSizes(k);
+  const k = viewT.k;
+  const sByDepth = new Map();
+  const sFor = d => { if(!sByDepth.has(d)) sByDepth.set(d, labelSizes(k, d)); return sByDepth.get(d); };
+  const s = labelSizes(k);
   labelLines = planLines(k);
   const plan = new Set();
   const rows = new Map();
@@ -693,7 +699,8 @@ function planLabels(positions){
      not share a slot horizontally. */
   const rowBoxes = new Map();
   rows.forEach((list, depth)=>{
-    list.forEach(it=>{ it.w = labelWidth(it.p, s); it.rank = descendantIds(it.p.id).length; });
+    const ds = sFor(depth);
+    list.forEach(it=>{ it.w = labelWidth(it.p, ds); it.rank = descendantIds(it.p.id).length; });
     list.sort((a,b)=> b.rank-a.rank || a.x-b.x);
     const taken = [];
     for(const it of list){
@@ -843,7 +850,10 @@ function rebuild(){ applyEdits(); buildTags(); renderAll(); }
 function renderIdentity(){
   const badge=$('roleBadge');
   badge.className='role-badge '+currentUser.role;
-  badge.textContent = t('role'+currentUser.role[0].toUpperCase()+currentUser.role.slice(1)).split('—')[0].trim();
+  const shortLabel = { viewer:{en:'viewer',ru:'гость'}, moderator:{en:'moderator',ru:'модератор'},
+                       admin:{en:'admin',ru:'админ'} };
+  const sl = shortLabel[currentUser.role];
+  badge.textContent = sl ? (sl[LANG]||sl.en) : currentUser.role;
   const signedIn = currentUser.role !== 'viewer';
   $('loginPanel').hidden = signedIn;
   $('signedInPanel').hidden = !signedIn;
@@ -1000,6 +1010,22 @@ function renderSources(){
     <div class="legend-item" title="${esc(n)}">
       <span class="lname">${esc(n)}</span><span class="lcount">${counts[n]}</span>
       <span class="lx" data-src="${esc(n)}" title="${esc(t('removeSource'))}">✕</span></div>`).join('');
+  $('sourceList2').querySelectorAll('.legend-item').forEach(row=>{
+    row.style.cursor='pointer';
+    row.onclick=e=>{
+      if(e.target.classList.contains('lx')) return;
+      const name=row.querySelector('.lname').textContent;
+      const ids=state.people.filter(p=>p.source===name).map(p=>p.id);
+      if(!ids.length) return;
+      highlightSet=new Set(ids);
+      renderTree(); addClearHighlightButton();
+      let sx=0,sy=0,c=0;
+      ids.forEach(id=>{const pos=layoutCache[id]; if(pos){sx+=pos.x;sy+=pos.y;c++;}});
+      if(c){ const r=$('tree-svg').getBoundingClientRect();
+        animateTo({k:viewT.k, x:r.width/2 - (sx/c)*viewT.k, y:r.height/2 - (sy/c)*viewT.k}); }
+      toast(t('lineageLit'));
+    };
+  });
   $('sourceList2').querySelectorAll('.lx').forEach(x=>{
     x.onclick=async ()=>{
       const name=x.dataset.src;
@@ -1098,11 +1124,12 @@ function renderTree(){
       inner += `<rect class="pill" x="${x-box.w/2-6/k}" y="${y+box.top-4/k}" width="${box.w+12/k}" height="${box.h+8/k}" rx="${4/k}"></rect>`;
 
     if(shown){
+      const ds = labelSizes(k, positions[p.id].depth);
       let ly = y;
-      if(labelLines.ru){ inner+=`<text x="${x}" y="${ly}" class="node-label">${esc(p.nameRu)}</text>`; ly+=(s.en+3)/k; }
-      if(labelLines.en){ inner+=`<text x="${x}" y="${ly}" class="node-label-ru">${esc(p.nameEn)}</text>`; ly+=(s.meta+3)/k; }
+      if(labelLines.ru){ inner+=`<text x="${x}" y="${ly}" class="node-label" style="font-size:${ds.ru/k}px">${esc(p.nameRu)}</text>`; ly+=(ds.en+3)/k; }
+      if(labelLines.en){ inner+=`<text x="${x}" y="${ly}" class="node-label-ru" style="font-size:${ds.en/k}px">${esc(p.nameEn)}</text>`; ly+=(ds.meta+3)/k; }
       if(labelLines.meta && (p.birth||p.death))
-        inner+=`<text x="${x}" y="${ly}" class="node-meta">${esc(yearOf(p.birth)||'?')}–${esc(yearOf(p.death)||'?')}</text>`;
+        inner+=`<text x="${x}" y="${ly}" class="node-meta" style="font-size:${ds.meta/k}px">${esc(yearOf(p.birth)||'?')}–${esc(yearOf(p.death)||'?')}</text>`;
       if(p.nameConfidence!=='high')
         inner+=`<circle cx="${x+box.w/2+2/k}" cy="${y+box.top+3/k}" r="${3/k}" fill="var(--danger)"></circle>`;
       const belowHidden = (!isColl && positions[p.id].depth===genLimit) ? descendantIds(p.id).length : 0;
@@ -1799,6 +1826,7 @@ loadRaw().then(raw=>{
   if(CFG.familyColors) for(const [n,c] of Object.entries(CFG.familyColors))
     if(state.tags.families[n]) state.tags.families[n].color=c;
   applyTheme(); applyLang(); renderAll(); bindChrome(); makePanelsFoldable();
+  maybeShowWelcome();
   buildDateField($('p_birth'),''); buildDateField($('p_death'),'');
   setTimeout(fitAll,60);
   if(!store.ok) toast(t('storageOff'));
@@ -1809,6 +1837,37 @@ loadRaw().then(raw=>{
       <div style="line-height:1.6">Open this over http — a local server or GitHub Pages — rather than
       double-clicking the file.<br><br><code style="font-family:var(--font-m)">${esc(err.message)}</code></div></div>`);
 });
+
+/* ============================= WELCOME ============================= */
+function showWelcome(){
+  const wrap=document.createElement('div');
+  wrap.className='overlay show';
+  wrap.id='welcomeOverlay';
+  wrap.innerHTML=`<div class="modal" style="max-width:520px">
+    <span class="close-x" id="welcomeClose">✕</span>
+    <h3>${esc(t('welcomeTitle'))}</h3>
+    <div class="modal-sub">${esc(t('welcomeSub'))}</div>
+    <div class="detail-row"><div class="dk">${esc(t('welcomeNav'))}</div><div class="dv">${esc(t('welcomeNavBody'))}</div></div>
+    <div class="detail-row"><div class="dk">${esc(t('welcomeZoom'))}</div><div class="dv">${esc(t('welcomeZoomBody'))}</div></div>
+    <div class="detail-row"><div class="dk">${esc(t('welcomeSearch'))}</div><div class="dv">${esc(t('welcomeSearchBody'))}</div></div>
+    <div class="detail-row"><div class="dk">${esc(t('welcomeHighlight'))}</div><div class="dv">${esc(t('welcomeHighlightBody'))}</div></div>
+    <div class="detail-row"><div class="dk">${esc(t('welcomeFilter'))}</div><div class="dv">${esc(t('welcomeFilterBody'))}</div></div>
+    <div class="detail-row"><div class="dk">${esc(t('welcomeEdit'))}</div><div class="dv">${esc(t('welcomeEditBody'))}</div></div>
+    <label class="toggle-pill" style="margin-top:14px;">
+      <span class="switch"><input type="checkbox" id="welcomeDontShow"><span class="slider"></span></span>
+      <span>${esc(t('welcomeDontShow'))}</span>
+    </label>
+    <div class="modal-actions"><button class="btn primary" id="welcomeGotIt">${esc(t('gotIt'))}</button></div>
+  </div>`;
+  document.body.appendChild(wrap);
+  const close=()=>{
+    if($('welcomeDontShow').checked) store.set('lk.welcomeSeen', true);
+    wrap.remove();
+  };
+  $('welcomeClose').onclick=close;
+  $('welcomeGotIt').onclick=close;
+}
+function maybeShowWelcome(){ if(!store.get('lk.welcomeSeen', false)) setTimeout(showWelcome, 400); }
 
 /* ============================= BINDINGS ============================= */
 function makePanelsFoldable(){
@@ -1896,6 +1955,11 @@ function bindChrome(){
     mutate({action:'realigned', detail:''}, ()=>{ state.positions={}; });
     toast(t('realigned')); fitAll();
   };
+  const helpBtn=document.createElement('button');
+  helpBtn.className='btn'; helpBtn.id='helpBtn'; helpBtn.textContent='?';
+  helpBtn.title=t('help');
+  $('themeBtn').parentNode.insertBefore(helpBtn,$('themeBtn'));
+  helpBtn.onclick=()=>showWelcome();
   $('themeBtn').onclick=()=>{ state.ui.theme = state.ui.theme==='light'?'dark':'light'; applyTheme(); saveState(); };
   $('uiLangBtn').onclick=()=>{ LANG = LANG==='en'?'ru':'en'; state.ui.lang=LANG; saveState(); applyLang(); renderAll(); };
   $('undoBtn').onclick=undo;
