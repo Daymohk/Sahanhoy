@@ -176,6 +176,16 @@ const I18N = {
     selected:'selected', confirmTitle:'Are you sure?', yes:'Yes', no:'Cancel',
     typeToSearch:'Type a name in either script…', clear:'Clear',
     excelHint:'Excel file loaded — review and undo if it looks wrong.',
+    help:'Show the welcome tour again', gotIt:'Got it',
+    welcomeTitle:'Welcome to the Sahanhoy lineage',
+    welcomeSub:'A quick tour before you dive in.',
+    welcomeNav:'Navigate', welcomeNavBody:'Drag empty space to pan around the tree. Click a name to open the details card.',
+    welcomeZoom:'Zoom', welcomeZoomBody:'Use the scroll wheel or the + / − buttons. Press ⤢ to fit the whole tree.',
+    welcomeSearch:'Search', welcomeSearchBody:'Type any name in Cyrillic or Latin. Typos are fine — гуди and Gudi both find the same person.',
+    welcomeHighlight:'Highlight a line', welcomeHighlightBody:'Click a name and choose Highlight this line to see ancestors and descendants stand out.',
+    welcomeFilter:'Filter families', welcomeFilterBody:'Click one or more families in the sidebar to show only those.',
+    welcomeEdit:'Editing', welcomeEditBody:'Moderators and admins can log in and turn on Edit mode to change the tree.',
+    welcomeDontShow:'Don’t show this again',
     csvFallback:'Excel library unavailable, exported CSV instead (opens in Excel).'
   },
   ru:{
@@ -243,6 +253,16 @@ const I18N = {
     selected:'выбрано', confirmTitle:'Вы уверены?', yes:'Да', no:'Отмена',
     typeToSearch:'Введите имя любым алфавитом…', clear:'Очистить',
     excelHint:'Файл Excel загружен — проверьте и отмените, если что-то не так.',
+    help:'Показать приветствие снова', gotIt:'Понятно',
+    welcomeTitle:'Добро пожаловать в родословную Саханхой',
+    welcomeSub:'Короткий обзор перед началом.',
+    welcomeNav:'Навигация', welcomeNavBody:'Тяните пустое место, чтобы двигать карту. Клик по имени открывает карточку.',
+    welcomeZoom:'Масштаб', welcomeZoomBody:'Колесо мыши или кнопки + / −. ⤢ показывает всё дерево целиком.',
+    welcomeSearch:'Поиск', welcomeSearchBody:'Введите имя кириллицей или латиницей. Опечатки не мешают — «гуди» и «Gudi» найдут одного и того же человека.',
+    welcomeHighlight:'Подсветка линии', welcomeHighlightBody:'Кликните имя → «Подсветить линию», чтобы выделить предков и потомков.',
+    welcomeFilter:'Фильтр по фамилиям', welcomeFilterBody:'Выберите одну или несколько фамилий в панели слева, чтобы показать только их.',
+    welcomeEdit:'Редактирование', welcomeEditBody:'Модераторы и администраторы могут войти и включить «Режим правки», чтобы менять дерево.',
+    welcomeDontShow:'Больше не показывать',
     csvFallback:'Библиотека Excel недоступна, выгружен CSV (открывается в Excel).'
   }
 };
@@ -635,7 +655,6 @@ function planLines(k){
    waits until there is room. */
 let genThresholds = [];
 function computeGenThresholds(positions){
-  const s = {ru:11, en:11*0.84, meta:11*0.75};      // the floor size
   const rows = new Map();
   for(const p of state.people){
     const pos = positions[p.id]; if(!pos) continue;
@@ -644,18 +663,22 @@ function computeGenThresholds(positions){
   }
   const out = [];
   rows.forEach((list, depth)=>{
+    /* Later generations shrink their fonts, so their threshold uses the
+       same shrink — a smaller label needs less room, appearing sooner. */
+    const shrink = depth > 0 ? Math.max(0.62, 1 - depth * 0.045) : 1;
+    const s = {ru:11*shrink, en:11*0.84*shrink, meta:11*0.75*shrink};
     list.sort((a,b)=>a.x-b.x);
     const need = [];
     for(let i=1;i<list.length;i++){
       const gap = list[i].x - list[i-1].x;
       if(gap <= 0) continue;
       const w = (labelWidthAt(list[i-1].p, s) + labelWidthAt(list[i].p, s))/2 + 10;
-      need.push(w / gap);                            // k at which they clear
+      need.push(w / gap);
     }
     need.sort((a,b)=>a-b);
-    /* the 92nd percentile, so a couple of tight spots are left to the
-       per-row planner instead of holding back the whole generation */
-    const k = need.length ? need[Math.min(need.length-1, Math.floor(need.length*0.80))] : 0;
+    /* 70th percentile — a few tight overlaps stay for the per-row planner
+       to handle, letting the generation reveal noticeably sooner. */
+    const k = need.length ? need[Math.min(need.length-1, Math.floor(need.length*0.70))] : 0;
     out[depth] = k;
   });
   return out;
