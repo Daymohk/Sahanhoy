@@ -253,7 +253,8 @@ svg#tree-svg.panning{cursor:grabbing;}
 
 .link{fill:none;stroke:var(--link);stroke-width:2;}
 .link.unverified{stroke-dasharray:4 4;stroke:var(--link-dash);}
-.link.lit{stroke:var(--accent);stroke-width:2.6;}
+/* --- highlighted lineage: strong contrast, scale-independent --- */
+.link.lit{stroke:var(--accent);stroke-width:3px;vector-effect:non-scaling-stroke;opacity:1 !important;}
 svg#tree-svg.far .node-label,
 svg#tree-svg.far .node-label-ru,
 svg#tree-svg.far .node-meta{display:none;}
@@ -423,6 +424,76 @@ html.light .overlay{background:rgba(60,50,38,.35);}
 html:not(.light) .node-label{fill:#f3e9da;}
 html:not(.light) .node-label-ru{fill:#b6a68d;}
 html:not(.light) .node-meta{fill:#8d7f6b;}
-html:not(.light) .link.lit{stroke:#e0aa50;}
+html:not(.light) .link.lit{stroke:#f0b84a;stroke-width:3px;vector-effect:non-scaling-stroke;}
+html.light      .link.lit{stroke:#a86e10;stroke-width:3px;vector-effect:non-scaling-stroke;}
+
+/* Lit names: bright fill, subtle glow via paint-order + stroke halo,
+   plus a bit heavier weight to survive dim rows and outshine neighbours. */
+.node-group.lit .node-label,
+.node-group.lit .node-label-ru,
+.node-group.lit .node-meta{
+  paint-order:stroke fill;
+  stroke-width:6px;
+  vector-effect:non-scaling-stroke;
+  font-weight:800;
+}
+html:not(.light) .node-group.lit .node-label{ fill:#ffe6a8; stroke:rgba(27,23,20,0.85); }
+html:not(.light) .node-group.lit .node-label-ru{ fill:#f0c877; stroke:rgba(27,23,20,0.85); }
+html:not(.light) .node-group.lit .node-meta{ fill:#d5ab5a; stroke:rgba(27,23,20,0.7); }
+html.light .node-group.lit .node-label{ fill:#3a1f00; stroke:rgba(255,255,255,0.9); }
+html.light .node-group.lit .node-label-ru{ fill:#5c3810; stroke:rgba(255,255,255,0.9); }
+html.light .node-group.lit .node-meta{ fill:#7a5626; stroke:rgba(255,255,255,0.85); }
+
+/* Force lit nodes fully opaque even when the rest is dimmed by filter */
+.node-group.lit{ opacity:1 !important; }
+
+/* Ticks for lit but unlabeled ancestors/descendants — a visible dot. */
+.node-group .lit-tick{
+  fill:var(--accent);
+  stroke:var(--bg);
+  stroke-width:2px;
+  vector-effect:non-scaling-stroke;
+}
+html:not(.light) .node-group .lit-tick{ fill:#f0b84a; stroke:#1b1714; }
+html.light      .node-group .lit-tick{ fill:#a86e10; stroke:#f4efe6; }
+
 /* the halo behind names is the page colour, so links pass behind cleanly */
 .node-label,.node-label-ru,.node-meta{stroke-width:3.5px;}
+
+/* ---------- editor panel (chart-side) ---------- */
+#editorPanel{
+  position:absolute; left:12px; bottom:12px; z-index:30;
+  width:260px; max-height:70vh; overflow:auto;
+  background:var(--panel); border:1px solid var(--border); border-radius:10px;
+  box-shadow:0 10px 24px rgba(0,0,0,.22);
+  font:12px var(--font-b); color:var(--text);
+}
+#editorPanel .ep-head{
+  display:flex; align-items:center; gap:6px;
+  padding:8px 10px; border-bottom:1px solid var(--border);
+  font-family:var(--font-d); font-size:13px;
+}
+#editorPanel .ep-btn{
+  background:transparent; border:1px solid var(--border); color:var(--text-dim);
+  border-radius:6px; padding:2px 8px; cursor:pointer; font-size:12px;
+}
+#editorPanel .ep-btn:hover{ color:var(--text); border-color:var(--accent); }
+#editorPanel .ep-body{ padding:8px 10px; }
+#editorPanel .ep-section{ margin-bottom:10px; }
+#editorPanel .ep-sec-title{
+  font-family:var(--font-m); font-size:10px; text-transform:uppercase;
+  letter-spacing:.5px; color:var(--text-faint); margin-bottom:6px;
+}
+#editorPanel .ep-row{
+  display:flex; align-items:center; gap:8px; margin-bottom:4px;
+}
+#editorPanel .ep-row label{
+  min-width:60px; font-size:11px; color:var(--text-dim);
+}
+#editorPanel .ep-row input[type=range]{ flex:1; }
+#editorPanel .ep-row > span{
+  min-width:44px; text-align:right; font:600 11px var(--font-m);
+  color:var(--text-dim);
+}
+/* marquee stroke thickness constant regardless of zoom */
+#marqueeRect{ pointer-events:none; }

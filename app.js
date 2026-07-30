@@ -5,13 +5,15 @@
 const CFG = window.SITE_CONFIG || {};
 const SPACING_X = 120, SPACING_Y = 150, NODE_R = 24;
 const GRID_X = SPACING_X / 2, GRID_Y = SPACING_Y / 2;
+const rowGap = () => (state && state.ui && state.ui.rowSpacing) ? state.ui.rowSpacing : SPACING_Y;
 /* The chart opens with three near-invisible root generations (Özd, Lom,
    Ghaydmr) before it fans out. Multiplying only those top gaps keeps them
    distinct without stretching the whole tree. */
 const TOP_GEN_GAP = 2.0;
 function rowY(depth){
-  const extra = Math.min(depth, 3) * SPACING_Y * (TOP_GEN_GAP - 1);
-  return depth * SPACING_Y + 70 + extra;
+  const g = rowGap();
+  const extra = Math.min(depth, 3) * g * (TOP_GEN_GAP - 1);
+  return depth * g + 70 + extra;
 }
 const PALETTE = ['#c4903f','#748067','#b1583f','#5f7ea3','#9a6a4f','#8471a0','#4c8a75',
                  '#c2a25c','#5f8a78','#a1607a','#5b7a45','#87699a','#8f8248','#4f7a8a'];
@@ -29,6 +31,23 @@ let isPanning = false, panStart = null;
 let layoutCache = null, contentBox = null;
 let undoStack = [], redoStack = [];
 let selectedIds = new Set();
+let marqueeBox = null;
+function renderMarquee(){
+  if(!marqueeBox) return;
+  const {sx,sy,ex,ey} = marqueeBox;
+  const l=Math.min(sx,ex), r=Math.max(sx,ex), t=Math.min(sy,ey), b=Math.max(sy,ey);
+  let m=document.getElementById('marqueeRect');
+  const svgns='http://www.w3.org/2000/svg';
+  if(!m){
+    m=document.createElementNS(svgns,'rect'); m.setAttribute('id','marqueeRect');
+    m.setAttribute('fill','var(--accent)'); m.setAttribute('fill-opacity','0.10');
+    m.setAttribute('stroke','var(--accent)'); m.setAttribute('stroke-dasharray','4 4');
+    m.setAttribute('vector-effect','non-scaling-stroke');
+    $('viewport').appendChild(m);
+  }
+  m.setAttribute('x', l); m.setAttribute('y', t);
+  m.setAttribute('width', r-l); m.setAttribute('height', b-t);
+}
 let linkDrag = null;           // {fromId, x, y} while dragging a relationship
 let labelPlan = new Set();     // ids whose names are drawn at this zoom
 let labelRefreshTimer = null;
@@ -176,6 +195,10 @@ const I18N = {
     selected:'selected', confirmTitle:'Are you sure?', yes:'Yes', no:'Cancel',
     typeToSearch:'Type a name in either script…', clear:'Clear',
     excelHint:'Excel file loaded — review and undo if it looks wrong.',
+    fontPanelTitle:'Font size per generation', fontReset:'Reset',
+    editorPanelTitle:'Editor', rowSpacingLabel:'Vertical spacing',
+    collapse:'Collapse', expand:'Expand',
+    fontPanelHint:'Multiplier on top of the auto-calculated size. 100% = auto. Reset returns every generation to auto.',
     help:'Show the welcome tour again', gotIt:'Got it',
     welcomeTitle:'Welcome to the Sahanhoy lineage',
     welcomeSub:'A quick tour before you dive in.',
@@ -253,6 +276,10 @@ const I18N = {
     selected:'выбрано', confirmTitle:'Вы уверены?', yes:'Да', no:'Отмена',
     typeToSearch:'Введите имя любым алфавитом…', clear:'Очистить',
     excelHint:'Файл Excel загружен — проверьте и отмените, если что-то не так.',
+    fontPanelTitle:'Размер шрифта по поколениям', fontReset:'Сброс',
+    editorPanelTitle:'Редактор', rowSpacingLabel:'Расстояние между поколениями',
+    collapse:'Свернуть', expand:'Развернуть',
+    fontPanelHint:'Множитель поверх автоматического размера. 100% = авто. Сброс возвращает все поколения к авто.',
     help:'Показать приветствие снова', gotIt:'Понятно',
     welcomeTitle:'Добро пожаловать в родословную Саханхой',
     welcomeSub:'Короткий обзор перед началом.',
@@ -615,12 +642,17 @@ function ensureSomeoneVisible(){
 let genFontScale = [];
 function labelSizes(k, depth){
   const span = Math.min(1, Math.max(0, (0.9 - k) / 0.74));
-  let ru = 11 + 5.5*span;                        // base range 11–16.5
+  let ru = 11 + 5.5*span;
   const rowGapScreen = SPACING_Y * k;
   ru = Math.min(ru, Math.max(6, rowGapScreen * 0.55));
   if(typeof depth === 'number'){
-    const factor = genFontScale[depth] != null ? genFontScale[depth] : 1;
-    ru = Math.max(6, Math.min(40, ru * factor));
+    let factor = genFontScale[depth] != null ? genFontScale[depth] : 1;
+    /* Admin override multiplies the auto-calculated factor rather than
+       replacing it, so the row still shrinks with zoom. Stored as a
+       percentage (100 = neutral). */
+    const ov = (state.ui.genFontOverride||{})[depth];
+    if(typeof ov === 'number') factor *= ov / 100;
+    ru = Math.max(6, Math.min(60, ru * factor));
   }
   return {ru, en:ru*0.84, meta:ru*0.75};
 }
@@ -635,19 +667,51 @@ function computeGenFontScales(positions){
     rows.get(pos.depth).push({p, x:pos.x});
   }
   const out = [];
+  /* Cyrillic + Latin stacked need real width. We measure the widest
+     name in the row using the same canvas measurer the planner uses,
+     then decide what font size the row can afford before it collides
+     with its neighbour, and cap by row height too. */
   rows.forEach((list, depth)=>{
-    if(list.length < 2){ out[depth] = 2.2; return; }   // lone name → big
     list.sort((a,b)=>a.x-b.x);
     let minGap = Infinity;
     for(let i=1;i<list.length;i++){
       const g = list[i].x - list[i-1].x;
       if(g > 0 && g < minGap) minGap = g;
     }
-    /* Compare to a nominal per-name budget of SPACING_X; a row with
-       twice that room gets factor ~1.4, a tight row gets ~0.75. */
-    const factor = Math.max(0.7, Math.min(2.4, minGap / SPACING_X));
+    if(!isFinite(minGap)) minGap = SPACING_X * 4;   // lone name
+
+    /* Widest label in the row, at font size 1. Both scripts and years. */
+    let unit = 0;
+    for(const it of list){
+      const p = it.p;
+      const wRu = textUnitWidth(p.nameRu||'', 600);
+      const wEn = textUnitWidth(p.nameEn||'', 400) * 0.84;
+      const wYr = (p.birth||p.death) ? textUnitWidth(String(yearOf(p.birth)||'?')+'–'+String(yearOf(p.death)||'?'), 400) * 0.75 : 0;
+      unit = Math.max(unit, wRu, wEn, wYr);
+    }
+    /* Font size (in world units) that keeps the widest name inside the
+       gap, minus a small gutter. */
+    const gutter = 24;                                // more air between neighbours
+    const budgetH = Math.max(6, (minGap - gutter) / Math.max(unit, 0.5));
+
+    /* Also cap by row height: 3 lines (RU + EN + years) plus small gaps
+       must fit in the top row (2× gap for depth 0–2) or normal row. */
+    const rowH = (depth < 3 ? SPACING_Y * 2 : SPACING_Y);
+    const lineCount = 2 + (list.some(it=>it.p.birth||it.p.death) ? 1 : 0);
+    const budgetV = (rowH * 0.6) / (lineCount * 1.15);
+
+    /* labelSizes base is ~11–16.5. Scale so budgetH corresponds to that. */
+    const size = Math.min(budgetH, budgetV);
+    let factor = Math.max(0.7, Math.min(2.2, size / 11));
+    if(depth >= 4 && depth <= 7) factor *= 0.64;
+    if(depth === 4) factor *= 0.8;                        // gen 4: extra 20% smaller
+    if(depth === 10) factor *= 0.75;                      // gen 10 shrinks so it appears earlier
     out[depth] = factor;
   });
+  /* Younger generations should never be bigger than older ones. */
+  for(let d = 1; d < out.length; d++){
+    if(out[d] != null && out[d-1] != null && out[d] > out[d-1]) out[d] = out[d-1];
+  }
   return out;
 }
 /* ── Text measurement ────────────────────────────────────────────────
@@ -697,7 +761,7 @@ function computeGenThresholds(positions){
   rows.forEach((list, depth)=>{
     /* Threshold uses the same per-depth scale factor, so denser rows
        (with smaller labels) surface sooner. */
-    const factor = genFontScale[depth] != null ? genFontScale[depth] : 1;
+    let factor = genFontScale[depth] != null ? genFontScale[depth] : 1;
     const base = 11 * Math.min(1, factor);   // dense rows shrink; sparse don't inflate for threshold
     const s = {ru:base, en:base*0.84, meta:base*0.75};
     list.sort((a,b)=>a.x-b.x);
@@ -774,26 +838,34 @@ function planLabels(positions){
      into the next generation. */
   const rowYs = new Map();
   rows.forEach((list, depth)=>{ if(list[0]) rowYs.set(depth, positions[list[0].p.id].y); });
-  /* Row-gap already shrinks the label size for us. Only drop a bottom
-     label whose box would actually overlap a top label's box, not just
-     share a column — a stack of chain names sits fine. */
-  const linesShown = 1 + (labelLines.en?1:0) + (labelLines.meta?1:0);
-  const labelBox = (labelLines.ru?s.ru:0) + (labelLines.en?s.en:0) + (labelLines.meta?s.meta:0) + linesShown*3 + 4;
+  /* Vertical cull: use each row's actual on-screen label height. A row
+     with big fonts has a tall label block, so it needs to keep clear of
+     the next row even further. Names align to their row's Y baseline,
+     with lines drawn below; we measure the top row's descent + the
+     bottom row's ascent plus a small padding. */
+  const labelBoxAt = ds => {
+    const linesShown = 1 + (labelLines.en?1:0) + (labelLines.meta?1:0);
+    return (labelLines.ru?ds.ru:0) + (labelLines.en?ds.en:0) + (labelLines.meta?ds.meta:0) + linesShown*3 + 4;
+  };
   const depths = [...rowYs.keys()].sort((a,b)=>a-b);
   for(let i=1;i<depths.length;i++){
     const dTop = depths[i-1], dBot = depths[i];
     const yGap = (rowYs.get(dBot) - rowYs.get(dTop)) * k;
-    if(yGap >= labelBox) continue;                 // rows already clear
-    /* Prefer the row that already has fewer labels through. */
-    const topShown = (rowBoxes.get(dTop)||[]).length;
-    const botShown = (rowBoxes.get(dBot)||[]).length;
-    const drop = topShown <= botShown ? dBot : dTop;
+    const topBox = labelBoxAt(sFor(dTop));
+    const botBox = labelBoxAt(sFor(dBot));
+    const need = topBox * 0.85 + botBox * 0.15 + 6;   // padding
+    if(yGap >= need) continue;
+    /* If they cannot both fit, drop the row with more members (denser). */
+    const topSize = (rows.get(dTop)||[]).length;
+    const botSize = (rows.get(dBot)||[]).length;
+    const drop = topSize > botSize ? dTop : dBot;
     const keep = drop === dTop ? dBot : dTop;
     const keepBoxes = rowBoxes.get(keep) || [];
     const dropList = rows.get(drop) || [];
     for(const it of dropList){
       if(!plan.has(it.p.id)) continue;
-      const cx = it.x*k, half = it.w/2 + 5;
+      /* Include a horizontal expansion so wide labels don't kiss. */
+      const cx = it.x*k, half = it.w/2 + 8;
       const l = cx-half, r = cx+half;
       if(keepBoxes.some(t=> l < t[1] && r > t[0])) plan.delete(it.p.id);
     }
@@ -818,6 +890,7 @@ function scheduleLabelRefresh(){
 }
 function applyTransform(){
   clampView();
+  document.dispatchEvent(new CustomEvent('lk:zoom'));
   $('viewport').setAttribute('transform', `translate(${viewT.x},${viewT.y}) scale(${viewT.k})`);
   const s = labelSizes(viewT.k);
   const svg = $('tree-svg');
@@ -896,7 +969,7 @@ function revealAndCentre(id){
 /* ============================= RENDER ============================= */
 function renderAll(){
   renderIdentity(); renderSelects(); renderLegends();
-  renderPending(); renderSources(); renderVersions(); renderAdmin(); renderAudit(); renderTree();
+  renderPending(); renderSources(); renderVersions(); renderAdmin(); renderAudit(); renderTree(); renderEditorPanel();
   $('brandSub').textContent = `${t('patrilineal')} · ${state.people.length} ${t('people')}`;
   refreshHistoryButtons();
 }
@@ -1023,6 +1096,7 @@ function passesFilter(p){
     const okName = F.flags.includes('name') && p.nameConfidence!=='high';
     if(!okLink && !okName) return false;
   }
+  if(F.sources && F.sources.length && !F.sources.includes(p.source||'')) return false;
   return true;
 }
 function nodeOpacity(p){
@@ -1066,20 +1140,19 @@ function renderSources(){
     <div class="legend-item" title="${esc(n)}">
       <span class="lname">${esc(n)}</span><span class="lcount">${counts[n]}</span>
       <span class="lx" data-src="${esc(n)}" title="${esc(t('removeSource'))}">✕</span></div>`).join('');
+  const F = state.ui.filters;
+  if(!F.sources) F.sources = [];
+  const picked = new Set(F.sources);
   $('sourceList2').querySelectorAll('.legend-item').forEach(row=>{
     row.style.cursor='pointer';
+    const name=row.querySelector('.lname').textContent;
+    if(picked.has(name)) row.classList.add('picked');
+    else if(F.sources.length) row.classList.add('muted');
     row.onclick=e=>{
       if(e.target.classList.contains('lx')) return;
-      const name=row.querySelector('.lname').textContent;
-      const ids=state.people.filter(p=>p.source===name).map(p=>p.id);
-      if(!ids.length) return;
-      highlightSet=new Set(ids);
-      renderTree(); addClearHighlightButton();
-      let sx=0,sy=0,c=0;
-      ids.forEach(id=>{const pos=layoutCache[id]; if(pos){sx+=pos.x;sy+=pos.y;c++;}});
-      if(c){ const r=$('tree-svg').getBoundingClientRect();
-        animateTo({k:viewT.k, x:r.width/2 - (sx/c)*viewT.k, y:r.height/2 - (sy/c)*viewT.k}); }
-      toast(t('lineageLit'));
+      const arr=F.sources, i=arr.indexOf(name);
+      i>=0 ? arr.splice(i,1) : arr.push(name);
+      saveState(); renderSources(); renderTree();
     };
   });
   $('sourceList2').querySelectorAll('.lx').forEach(x=>{
@@ -1114,6 +1187,46 @@ function renderVersions(){
     saveState(); rebuild(); toast(t('restored'));
   });
 }
+function renderFontPanel(){
+  /* Sidebar panel deprecated; the chart-side editor panel handles this. */
+  const panel=$('fontPanel'); if(panel) panel.style.display='none';
+  return;
+  // legacy body below is no longer executed
+  const show = canAdmin() && state.ui.editMode;
+  panel.style.display = show ? '' : 'none';
+  if(!show) return;
+  /* Enumerate generations that actually exist. */
+  const depths = new Set();
+  state.people.forEach(p=>{ const o=(layoutCache||{})[p.id]; if(o) depths.add(o.depth); });
+  const list = [...depths].sort((a,b)=>a-b);
+  const ov = state.ui.genFontOverride || (state.ui.genFontOverride={});
+  const rows = list.map(d=>{
+    const val = typeof ov[d] === 'number' ? ov[d] : 100;
+    return `<div class="field" style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+      <label style="min-width:60px;margin:0;">${t('generation')} ${d+1}</label>
+      <input type="range" min="40" max="220" step="5" value="${val}" data-fd="${d}" style="flex:1;">
+      <span data-fv="${d}" style="min-width:38px;text-align:right;font:600 11px var(--font-m);">${val}%</span>
+    </div>`;
+  }).join('');
+  $('fontRows').innerHTML = rows;
+  $('fontRows').querySelectorAll('input[type=range]').forEach(inp=>{
+    inp.oninput = e=>{
+      const d = +e.target.dataset.fd;
+      const v = +e.target.value;
+      state.ui.genFontOverride[d] = v;
+      $('fontRows').querySelector('[data-fv="'+d+'"]').textContent = v+'%';
+      saveState();
+      renderTree();
+    };
+  });
+  $('fontResetBtn').onclick = ()=>{
+    state.ui.genFontOverride = {};
+    saveState();
+    renderFontPanel();
+    renderTree();
+  };
+}
+
 function renderAdmin(){
   $('modPasscode').value=state.passcodes.moderator;
   $('adminPasscode').value=state.passcodes.admin;
@@ -1194,10 +1307,15 @@ function renderTree(){
         inner+=`<text x="${x+box.w/2+8/k}" y="${y}" class="node-badge-text">+${badge}</text>`;
     } else {
       /* Too tight for type: a small neutral tick keeps the person clickable. */
-      inner += `<rect class="tick" x="${x-2/k}" y="${y-3/k}" width="${4/k}" height="${6/k}"></rect>`;
+      const litTick = highlightSet && highlightSet.has(p.id);
+      if(litTick){
+        inner += `<circle class="tick lit-tick" cx="${x}" cy="${y}" r="${6/k}"></circle>`;
+      } else {
+        inner += `<rect class="tick" x="${x-2/k}" y="${y-3/k}" width="${4/k}" height="${6/k}"></rect>`;
+      }
     }
 
-    const cls = 'node-group' + (selectedIds.has(p.id)?' picked':'') + (shown?'':' tiny');
+    const cls = 'node-group' + (selectedIds.has(p.id)?' picked':'') + (shown?'':' tiny') + (highlightSet && highlightSet.has(p.id) ? ' lit' : '');
     html+=`<g class="${cls}" data-id="${p.id}" style="opacity:${nodeOpacity(p)}">${inner}</g>`;
 
     if(editing() && k > 0.3 && shown){
@@ -1239,7 +1357,7 @@ function attachNodeHandlers(){
     g.addEventListener('pointerdown', e=>{
       e.stopPropagation();
       if(linkDrag) return;
-      if(e.shiftKey && editing()){
+      if((e.shiftKey || e.metaKey || e.ctrlKey) && editing()){
         selectedIds.has(id) ? selectedIds.delete(id) : selectedIds.add(id);
         renderTree(); return;
       }
@@ -1735,22 +1853,26 @@ const downloadJson = (name,obj) => downloadBlob(name, JSON.stringify(obj,null,1)
    dropped without going back to the sidebar. */
 function renderFilterChips(){
   let bar = $('filterChips');
-  const picked = state.ui.filters.families;
-  if(!picked.length){ if(bar) bar.remove(); return; }
+  const F = state.ui.filters;
+  const items = [];
+  (F.families||[]).forEach(n=>items.push({kind:'families', n, color:(state.tags.families[n]||{}).color||'#7d7263', label:n==='__none'?t('noFamily'):n}));
+  (F.sources ||[]).forEach(n=>items.push({kind:'sources',  n, color:'#8a6b3c', label:n}));
+  if(!items.length){ if(bar) bar.remove(); return; }
   if(!bar){
     bar=document.createElement('div'); bar.id='filterChips'; bar.className='filter-chips';
     document.querySelector('.canvas-wrap').appendChild(bar);
   }
-  bar.innerHTML = `<span class="fc-label">${t('showingOnly')}</span>` + picked.map(n=>{
-    const c=(state.tags.families[n]||{}).color||'#7d7263';
-    const label = n==='__none' ? t('noFamily') : n;
-    return `<span class="fc" data-n="${esc(n)}"><i style="background:${c}"></i>${esc(label)}<b>✕</b></span>`;
-  }).join('');
+  bar.innerHTML = `<span class="fc-label">${t('showingOnly')}</span>` + items.map(it=>
+    `<span class="fc" data-kind="${it.kind}" data-n="${esc(it.n)}"><i style="background:${it.color}"></i>${esc(it.label)}<b>✕</b></span>`).join('');
   bar.querySelectorAll('.fc').forEach(el=>{
     el.querySelector('b').onclick=()=>{
-      const arr=state.ui.filters.families;
+      const kind=el.dataset.kind;
+      const arr=state.ui.filters[kind];
       arr.splice(arr.indexOf(el.dataset.n),1);
-      saveState(); renderLegends(); renderTree();
+      saveState();
+      if(kind==='families') renderLegends();
+      else renderSources();
+      renderTree();
     };
   });
 }
@@ -1862,18 +1984,19 @@ loadRaw().then(raw=>{
     passcodes:saved.passcodes||{moderator:'mod123', admin:'admin123'},
     tags:saved.tags||{families:{},teips:{}},
     ui:Object.assign({
-      lang:'en', theme:'dark', editMode:false,
+      lang:'ru', theme:'dark', editMode:false,
+      genFontOverride:{}, rowSpacing:SPACING_Y,
       hoverFields:['family','lived','age','generation','sons','flags'],
       selectFields:['family','lived','age','generation','line','notes','source','flags'],
-      filters:{families:[],flags:[]}
+      filters:{families:[],flags:[],sources:[]}
     }, saved.ui||{})
   };
-  if(!state.ui.filters) state.ui.filters={families:[],flags:[]};
-  LANG=state.ui.lang||'en';
+  if(!state.ui.filters) state.ui.filters={families:[],flags:[],sources:[]};
+  LANG=state.ui.lang||'ru';                  // default: Russian for new visitors
   // Migration: drop tukkhum from any locally-saved edits and stale filter arrays
   if(state.edits){ for(const k in state.edits){ if(state.edits[k] && 'tukkhum' in state.edits[k]) delete state.edits[k].tukkhum; } }
   if(state.tags && state.tags.tukkhums) delete state.tags.tukkhums;
-  if(state.ui && state.ui.filters){ delete state.ui.filters.tukkhums; delete state.ui.filters.teips; }
+  if(state.ui && state.ui.filters){ delete state.ui.filters.tukkhums; delete state.ui.filters.teips; if(!state.ui.filters.sources) state.ui.filters.sources = []; }
   if(state.ui && state.ui.hoverFields) state.ui.hoverFields = state.ui.hoverFields.filter(k=>k!=='teip'&&k!=='tukkhum');
   if(state.ui && state.ui.selectFields) state.ui.selectFields = state.ui.selectFields.filter(k=>k!=='teip'&&k!=='tukkhum');
   currentUser=store.get(K.user,{name:'',role:'viewer'});
@@ -1894,34 +2017,124 @@ loadRaw().then(raw=>{
       double-clicking the file.<br><br><code style="font-family:var(--font-m)">${esc(err.message)}</code></div></div>`);
 });
 
+/* ================== EDITOR PANEL (on the chart) ================== */
+/* Admin-only, edit-mode-only. Docked bottom-left of the canvas. */
+function renderEditorPanel(){
+  const wrap = $('editorPanel');
+  const show = canAdmin() && state.ui.editMode;
+  if(!show){
+    if(wrap) wrap.remove();
+    return;
+  }
+  if(!wrap){
+    const el = document.createElement('div');
+    el.id='editorPanel';
+    document.querySelector('.canvas-wrap').appendChild(el);
+  }
+  const panel = $('editorPanel');
+  panel.style.display='';
+  const folded = !!state.ui.editorPanelFolded;
+  const depths = new Set();
+  state.people.forEach(p=>{ const o=(layoutCache||{})[p.id]; if(o) depths.add(o.depth); });
+  const list = [...depths].sort((a,b)=>a-b);
+  const ov = state.ui.genFontOverride || (state.ui.genFontOverride={});
+  const rs = state.ui.rowSpacing != null ? state.ui.rowSpacing : SPACING_Y;
+  const rows = list.map(d=>{
+    const val = typeof ov[d] === 'number' ? ov[d] : 100;
+    return `<div class="ep-row">
+      <label>${t('generation')} ${d+1}</label>
+      <input type="range" min="40" max="220" step="5" value="${val}" data-fd="${d}">
+      <span data-fv="${d}">${val}%</span></div>`;
+  }).join('');
+  panel.innerHTML = `
+    <div class="ep-head">
+      <b>${t('editorPanelTitle')}</b>
+      <span style="flex:1"></span>
+      <button class="ep-btn" id="epReset" title="${esc(t('fontReset'))}">↺</button>
+      <button class="ep-btn" id="epFold" title="${esc(folded?t('expand'):t('collapse'))}">${folded?'▸':'▾'}</button>
+    </div>
+    <div class="ep-body" ${folded?'hidden':''}>
+      <div class="ep-section"><div class="ep-sec-title">${t('rowSpacingLabel')}</div>
+        <div class="ep-row">
+          <input type="range" min="80" max="360" step="10" value="${rs}" id="epSpacing">
+          <span id="epSpacingVal">${rs}px</span>
+        </div>
+      </div>
+      <div class="ep-section"><div class="ep-sec-title">${t('fontPanelTitle')}</div>
+        ${rows}
+      </div>
+    </div>`;
+  panel.querySelectorAll('input[type=range][data-fd]').forEach(inp=>{
+    inp.oninput = e=>{
+      const d = +e.target.dataset.fd, v = +e.target.value;
+      state.ui.genFontOverride[d] = v;
+      panel.querySelector('[data-fv="'+d+'"]').textContent = v+'%';
+      saveState(); renderTree();
+    };
+  });
+  $('epSpacing').oninput = e=>{
+    state.ui.rowSpacing = +e.target.value;
+    $('epSpacingVal').textContent = e.target.value+'px';
+    saveState();
+    /* Row change means layout must recompute. */
+    state.positions = state.positions;  // no-op; renderTree recomputes layout
+    renderTree();
+  };
+  $('epReset').onclick = ()=>{
+    state.ui.genFontOverride = {};
+    state.ui.rowSpacing = SPACING_Y;
+    saveState(); renderEditorPanel(); renderTree();
+  };
+  $('epFold').onclick = ()=>{
+    state.ui.editorPanelFolded = !state.ui.editorPanelFolded;
+    saveState(); renderEditorPanel();
+  };
+}
+
 /* ============================= WELCOME ============================= */
 function showWelcome(){
+  /* Use the app language, defaulting to Russian for first visit. */
+  let wLang = LANG;
   const wrap=document.createElement('div');
   wrap.className='overlay show';
   wrap.id='welcomeOverlay';
-  wrap.innerHTML=`<div class="modal" style="max-width:520px">
-    <span class="close-x" id="welcomeClose">✕</span>
-    <h3>${esc(t('welcomeTitle'))}</h3>
-    <div class="modal-sub">${esc(t('welcomeSub'))}</div>
-    <div class="detail-row"><div class="dk">${esc(t('welcomeNav'))}</div><div class="dv">${esc(t('welcomeNavBody'))}</div></div>
-    <div class="detail-row"><div class="dk">${esc(t('welcomeZoom'))}</div><div class="dv">${esc(t('welcomeZoomBody'))}</div></div>
-    <div class="detail-row"><div class="dk">${esc(t('welcomeSearch'))}</div><div class="dv">${esc(t('welcomeSearchBody'))}</div></div>
-    <div class="detail-row"><div class="dk">${esc(t('welcomeHighlight'))}</div><div class="dv">${esc(t('welcomeHighlightBody'))}</div></div>
-    <div class="detail-row"><div class="dk">${esc(t('welcomeFilter'))}</div><div class="dv">${esc(t('welcomeFilterBody'))}</div></div>
-    <div class="detail-row"><div class="dk">${esc(t('welcomeEdit'))}</div><div class="dv">${esc(t('welcomeEditBody'))}</div></div>
-    <label class="toggle-pill" style="margin-top:14px;">
-      <span class="switch"><input type="checkbox" id="welcomeDontShow"><span class="slider"></span></span>
-      <span>${esc(t('welcomeDontShow'))}</span>
-    </label>
-    <div class="modal-actions"><button class="btn primary" id="welcomeGotIt">${esc(t('gotIt'))}</button></div>
-  </div>`;
-  document.body.appendChild(wrap);
-  const close=()=>{
-    if($('welcomeDontShow').checked) store.set('lk.welcomeSeen', true);
+  const tw = k => {
+    const dicts = { en: I18N.en, ru: I18N.ru };
+    return dicts[wLang] && dicts[wLang][k] ? dicts[wLang][k] : (I18N.en[k] || k);
+  };
+  /* Declared before render() so onclick handlers can see it. */
+  const close = ()=>{
+    const cb = $('welcomeDontShow');
+    if(cb && cb.checked) store.set('lk.welcomeSeen', true);
     wrap.remove();
   };
-  $('welcomeClose').onclick=close;
-  $('welcomeGotIt').onclick=close;
+  const render = ()=>{
+    const other = wLang==='en' ? 'ru' : 'en';
+    wrap.innerHTML=`<div class="modal" style="max-width:520px">
+      <span class="close-x" id="welcomeClose">✕</span>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;">
+        <h3 style="margin:0;">${esc(tw('welcomeTitle'))}</h3>
+        <button class="btn small" id="welcomeLangToggle" style="min-width:52px;">${other==='ru'?'РУ':'EN'}</button>
+      </div>
+      <div class="modal-sub">${esc(tw('welcomeSub'))}</div>
+      <div class="detail-row"><div class="dk">${esc(tw('welcomeNav'))}</div><div class="dv">${esc(tw('welcomeNavBody'))}</div></div>
+      <div class="detail-row"><div class="dk">${esc(tw('welcomeZoom'))}</div><div class="dv">${esc(tw('welcomeZoomBody'))}</div></div>
+      <div class="detail-row"><div class="dk">${esc(tw('welcomeSearch'))}</div><div class="dv">${esc(tw('welcomeSearchBody'))}</div></div>
+      <div class="detail-row"><div class="dk">${esc(tw('welcomeHighlight'))}</div><div class="dv">${esc(tw('welcomeHighlightBody'))}</div></div>
+      <div class="detail-row"><div class="dk">${esc(tw('welcomeFilter'))}</div><div class="dv">${esc(tw('welcomeFilterBody'))}</div></div>
+      <div class="detail-row"><div class="dk">${esc(tw('welcomeEdit'))}</div><div class="dv">${esc(tw('welcomeEditBody'))}</div></div>
+      <label class="toggle-pill" style="margin-top:14px;">
+        <span class="switch"><input type="checkbox" id="welcomeDontShow"><span class="slider"></span></span>
+        <span>${esc(tw('welcomeDontShow'))}</span>
+      </label>
+      <div class="modal-actions"><button class="btn primary" id="welcomeGotIt">${esc(tw('gotIt'))}</button></div>
+    </div>`;
+    $('welcomeLangToggle').onclick=()=>{ wLang = wLang==='en'?'ru':'en'; render(); };
+    $('welcomeClose').onclick=close;
+    $('welcomeGotIt').onclick=close;
+  };
+  document.body.appendChild(wrap);
+  render();
 }
 function maybeShowWelcome(){ if(!store.get('lk.welcomeSeen', false)) setTimeout(showWelcome, 400); }
 
@@ -1957,6 +2170,15 @@ function bindChrome(){
 
   svg.addEventListener('pointerdown',e=>{
     if(e.target.closest('.node-group')||e.target.closest('.handle')) return;
+    /* Shift+drag on empty space = marquee selection (admin edit mode). */
+    if(e.shiftKey && editing()){
+      const pt=svgPoint(e);
+      marqueeBox = {sx:pt.x, sy:pt.y, ex:pt.x, ey:pt.y, add:e.metaKey||e.ctrlKey};
+      if(!marqueeBox.add) selectedIds.clear();
+      renderMarquee();
+      try{ svg.setPointerCapture(e.pointerId); }catch(_){}
+      return;
+    }
     if(selectedIds.size && !e.shiftKey){ selectedIds.clear(); renderTree(); }
     $('sidebar').classList.add('collapsed');
     isPanning=true; panStart={mx:e.clientX,my:e.clientY,x:viewT.x,y:viewT.y};
@@ -1964,7 +2186,10 @@ function bindChrome(){
     try{ svg.setPointerCapture(e.pointerId); }catch(_){}
   });
   window.addEventListener('pointermove',e=>{
-    if(isPanning){
+    if(marqueeBox){
+      const pt=svgPoint(e); marqueeBox.ex=pt.x; marqueeBox.ey=pt.y;
+      renderMarquee();
+    } else if(isPanning){
       viewT.x=panStart.x+(e.clientX-panStart.mx);
       viewT.y=panStart.y+(e.clientY-panStart.my);
       applyTransform();
@@ -1981,6 +2206,18 @@ function bindChrome(){
     }
   });
   window.addEventListener('pointerup',()=>{
+    if(marqueeBox){
+      const {sx,sy,ex,ey,add} = marqueeBox;
+      const l=Math.min(sx,ex), r=Math.max(sx,ex), t=Math.min(sy,ey), b=Math.max(sy,ey);
+      if(!add) selectedIds.clear();
+      state.people.forEach(p=>{
+        const pos=(layoutCache||{})[p.id]; if(!pos) return;
+        if(pos.x>=l && pos.x<=r && pos.y>=t && pos.y<=b) selectedIds.add(p.id);
+      });
+      marqueeBox=null;
+      const m=document.getElementById('marqueeRect'); if(m) m.remove();
+      renderTree();
+    }
     if(isPanning){ isPanning=false; svg.classList.remove('panning'); ensureSomeoneVisible(); }
     if(linkDrag){                       // released on empty space: cancel
       linkDrag=null; renderTree(); toast(t('linkCancelled'));
@@ -1999,6 +2236,16 @@ function bindChrome(){
 
   $('zoomIn').onclick=()=>zoomAbout(1.3);
   $('zoomOut').onclick=()=>zoomAbout(1/1.3);
+  /* Zoom % indicator for admins only. */
+  const zi=document.createElement('div');
+  zi.id='zoomInd'; zi.hidden=!canAdmin(); zi.style.cssText=
+    'position:absolute;right:12px;bottom:130px;padding:3px 8px;font:600 11px var(--font-m);' +
+    'background:var(--panel);border:1px solid var(--border);border-radius:6px;' +
+    'color:var(--text-dim);pointer-events:none;z-index:20;';
+  document.querySelector('.canvas-wrap').appendChild(zi);
+  const updateZoom=()=>{ zi.hidden=!canAdmin(); zi.textContent=Math.round(viewT.k*100)+'%'; };
+  updateZoom();
+  document.addEventListener('lk:zoom', updateZoom);
   $('zoomFit').onclick=fitAll;
 
   $('editModeToggle').addEventListener('change',e=>{
