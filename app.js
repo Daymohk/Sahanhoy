@@ -570,6 +570,7 @@ function computeLayout(){
     minY=Math.min(minY,o.y); maxY=Math.max(maxY,o.y);
   });
   contentBox = {minX:minX-90, maxX:maxX+90, minY:minY-70, maxY:maxY+90};
+  genFontScale = computeGenFontScales(out);
   genThresholds = computeGenThresholds(out);
   return out;
 }
@@ -605,18 +606,49 @@ function ensureSomeoneVisible(){
 }
 /* Labels grow as you zoom out and settle to a floor as you zoom in, so
    names stay legible across the whole range. */
+/* Font size is decided per-generation. The base curve gives everyone a
+   size that scales with zoom, then genFontScale multiplies by an
+   available-space factor computed for each depth: a row with plenty of
+   horizontal room per person gets a bigger factor, a crowded row gets
+   less. This is what lets earlier generations use noticeably larger
+   text than later ones. */
+let genFontScale = [];
 function labelSizes(k, depth){
   const span = Math.min(1, Math.max(0, (0.9 - k) / 0.74));
-  let ru = 11 + 5.5*span;
+  let ru = 11 + 5.5*span;                        // base range 11–16.5
   const rowGapScreen = SPACING_Y * k;
   ru = Math.min(ru, Math.max(6, rowGapScreen * 0.55));
-  /* Earlier generations use the base size; later ones step down so they
-     fit sooner without colliding. */
-  if(typeof depth === 'number' && depth > 0){
-    const shrink = Math.max(0.62, 1 - depth * 0.045);
-    ru = Math.max(6, ru * shrink);
+  if(typeof depth === 'number'){
+    const factor = genFontScale[depth] != null ? genFontScale[depth] : 1;
+    ru = Math.max(6, Math.min(40, ru * factor));
   }
   return {ru, en:ru*0.84, meta:ru*0.75};
+}
+/* Compute one scaling factor per generation from the tightest gap in
+   that row. A generation with lots of room per person gets a factor > 1
+   (larger fonts); a crowded generation gets < 1. */
+function computeGenFontScales(positions){
+  const rows = new Map();
+  for(const p of state.people){
+    const pos = positions[p.id]; if(!pos) continue;
+    if(!rows.has(pos.depth)) rows.set(pos.depth, []);
+    rows.get(pos.depth).push({p, x:pos.x});
+  }
+  const out = [];
+  rows.forEach((list, depth)=>{
+    if(list.length < 2){ out[depth] = 2.2; return; }   // lone name → big
+    list.sort((a,b)=>a.x-b.x);
+    let minGap = Infinity;
+    for(let i=1;i<list.length;i++){
+      const g = list[i].x - list[i-1].x;
+      if(g > 0 && g < minGap) minGap = g;
+    }
+    /* Compare to a nominal per-name budget of SPACING_X; a row with
+       twice that room gets factor ~1.4, a tight row gets ~0.75. */
+    const factor = Math.max(0.7, Math.min(2.4, minGap / SPACING_X));
+    out[depth] = factor;
+  });
+  return out;
 }
 /* ── Text measurement ────────────────────────────────────────────────
    Cyrillic capitals are appreciably wider than mixed-case Latin, so a
@@ -663,10 +695,11 @@ function computeGenThresholds(positions){
   }
   const out = [];
   rows.forEach((list, depth)=>{
-    /* Later generations shrink their fonts, so their threshold uses the
-       same shrink — a smaller label needs less room, appearing sooner. */
-    const shrink = depth > 0 ? Math.max(0.62, 1 - depth * 0.045) : 1;
-    const s = {ru:11*shrink, en:11*0.84*shrink, meta:11*0.75*shrink};
+    /* Threshold uses the same per-depth scale factor, so denser rows
+       (with smaller labels) surface sooner. */
+    const factor = genFontScale[depth] != null ? genFontScale[depth] : 1;
+    const base = 11 * Math.min(1, factor);   // dense rows shrink; sparse don't inflate for threshold
+    const s = {ru:base, en:base*0.84, meta:base*0.75};
     list.sort((a,b)=>a.x-b.x);
     const need = [];
     for(let i=1;i<list.length;i++){
