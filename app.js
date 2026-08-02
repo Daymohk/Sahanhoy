@@ -139,7 +139,7 @@ const I18N = {
     roleViewer:'Viewer — look only', roleContributor:'Contributor — suggest changes',
     roleModerator:'Moderator — confirm and delete', roleAdmin:'Admin — full editing',
     passcode:'Passcode', save:'Save',
-    passcodeHint:'Moderator and Admin passcodes are a soft, shared-community gate — not real security. The published tree only changes when someone commits data/people.json.',
+    passcodeHint:'The Admin passcode is a soft, shared-community gate — not real security. The published tree only changes when someone commits data/people.json.',
     addPerson:'Add a person', nameRu:'Имя (RU)', nameEn:'Name (EN)',
     translitHint:'Type either script and the other fills itself in.',
     born:'Born', died:'Died', father:'Father', familyName:'Family name', notes:'Notes',
@@ -207,7 +207,7 @@ const I18N = {
     welcomeSearch:'Search', welcomeSearchBody:'Type any name in Cyrillic or Latin. Typos are fine — гуди and Gudi both find the same person.',
     welcomeHighlight:'Highlight a line', welcomeHighlightBody:'Click a name and choose Highlight this line to see ancestors and descendants stand out.',
     welcomeFilter:'Filter families', welcomeFilterBody:'Click one or more families in the sidebar to show only those.',
-    welcomeEdit:'Editing', welcomeEditBody:'Moderators and admins can log in and turn on Edit mode to change the tree.',
+    welcomeEdit:'Editing', welcomeEditBody:'Admins can log in and turn on Edit mode to change the tree.',
     welcomeDontShow:'Don’t show this again',
     csvFallback:'Excel library unavailable, exported CSV instead (opens in Excel).'
   },
@@ -220,7 +220,7 @@ const I18N = {
     roleViewer:'Гость — только просмотр', roleContributor:'Участник — предлагать правки',
     roleModerator:'Модератор — подтверждать и удалять', roleAdmin:'Администратор — полное редактирование',
     passcode:'Код доступа', save:'Сохранить',
-    passcodeHint:'Коды модератора и администратора — это общий негласный барьер, а не настоящая защита. Опубликованное дерево меняется только когда кто-то коммитит data/people.json.',
+    passcodeHint:'Код администратора — это общий негласный барьер, а не настоящая защита. Опубликованное дерево меняется только когда кто-то коммитит data/people.json.',
     addPerson:'Добавить человека', nameRu:'Имя (кир.)', nameEn:'Имя (лат.)',
     translitHint:'Введите один алфавит — второй заполнится сам.',
     born:'Родился', died:'Умер', father:'Отец', familyName:'Фамилия', notes:'Примечание',
@@ -288,7 +288,7 @@ const I18N = {
     welcomeSearch:'Поиск', welcomeSearchBody:'Введите имя кириллицей или латиницей. Опечатки не мешают — «гуди» и «Gudi» найдут одного и того же человека.',
     welcomeHighlight:'Подсветка линии', welcomeHighlightBody:'Кликните имя → «Подсветить линию», чтобы выделить предков и потомков.',
     welcomeFilter:'Фильтр по фамилиям', welcomeFilterBody:'Выберите одну или несколько фамилий в панели слева, чтобы показать только их.',
-    welcomeEdit:'Редактирование', welcomeEditBody:'Модераторы и администраторы могут войти и включить «Режим правки», чтобы менять дерево.',
+    welcomeEdit:'Редактирование', welcomeEditBody:'Администраторы могут войти и включить «Режим правки», чтобы менять дерево.',
     welcomeDontShow:'Больше не показывать',
     csvFallback:'Библиотека Excel недоступна, выгружен CSV (открывается в Excel).'
   }

@@ -79,7 +79,6 @@
           <label data-i18n="role"></label>
           <select id="userRole">
             <option value="viewer" data-i18n="roleViewer"></option>
-            <option value="moderator" data-i18n="roleModerator"></option>
             <option value="admin" data-i18n="roleAdmin"></option>
           </select>
         </div>
@@ -161,7 +160,7 @@
 
       <div class="panel" id="adminPanel" style="display:none;">
         <h2 data-i18n="adminSettings"></h2>
-        <div class="field"><label data-i18n="modPass"></label><input type="text" id="modPasscode"></div>
+        <div class="field" style="display:none;"><label data-i18n="modPass"></label><input type="text" id="modPasscode"></div>
         <div class="field"><label data-i18n="adminPass"></label><input type="text" id="adminPasscode"></div>
         <button class="btn small" id="savePasscodesBtn" data-i18n="savePasscodes"></button>
         <div class="btn-grid" style="margin-top:10px;">
